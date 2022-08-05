@@ -1,6 +1,6 @@
 {
 	"name": "blue-harvest-rocks",
-	"homepage": "",
+	"homepage": "http://blueharvest.rocks",
 	"version": "0.1.0",
 	"private": true,
 	"main": "index.js",

@@ -7,7 +7,7 @@ const dark = css`
 	--text: #fff;
 	--link: #fff;
 	--linkAlt: #a0a8d9;
-	--linkHover: #00b8d4;
+	--linkHover: #bbb;
 	--linkActive: #304ffe;
 	--heart: #ff1493;
 	--download: #ff540d;
@@ -23,6 +23,15 @@ const dark = css`
 	--green: #32de84;
 
 	color: var(--text);
+
+	a {
+		color: var(--link);
+		text-decoration: none;
+		&:hover {
+			color: var(--link);
+			text-decoration: underline;
+		}
+	}
 `
 
 const light = css`
@@ -32,7 +41,7 @@ const light = css`
 	--text: #000;
 	--link: #333;
 	--linkAlt: #3e498c;
-	--linkHover: #028da2;
+	--linkHover: #666;
 	--linkActive: #304ffe;
 	--heart: #fa48a7;
 	--download: #be060c;
@@ -48,6 +57,15 @@ const light = css`
 	--green: #32de84;
 
 	color: var(--text);
+
+	a {
+		color: var(--link);
+		text-decoration: none;
+		&:hover {
+			color: var(--link);
+			text-decoration: underline;
+		}
+	}
 `
 
 const themeConditional = theme => {

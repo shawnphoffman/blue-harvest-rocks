@@ -1,0 +1,88 @@
+const items = [
+	{
+		title: 'Twitter',
+		href: 'https://twitter.com/BlueHarvestPod',
+		icon: 'fa-brands fa-twitter',
+		subtitle: '',
+		background: '#1da1f2',
+	},
+	{
+		title: 'Patreon',
+		href: 'https://www.patreon.com/blueharvestpodcast',
+		icon: 'fa-brands fa-patreon',
+		subtitle: '',
+		background: '#f96854',
+	},
+	{
+		title: 'Apple Podcasts',
+		href: 'https://podcasts.apple.com/us/podcast/blue-harvest-a-star-wars-podcast/id1009917662',
+		icon: 'fa-solid fa-podcast',
+		subtitle: '',
+		background: '#872EC4',
+	},
+	{
+		title: 'Spotify',
+		href: 'https://open.spotify.com/show/3Krn2ePCbILvzORISjh2PT',
+		icon: 'fa-brands fa-spotify',
+		subtitle: '',
+		background: '#1db954',
+	},
+	{
+		title: 'Twitch',
+		href: 'http://www.twitch.tv/blueharvestpod',
+		icon: 'fa-brands fa-twitch',
+		subtitle: '',
+		background: '#9146ff',
+	},
+	{
+		title: 'Voicemails & Emails',
+		href: 'mailto:blueharvestpodcast@gmail.com',
+		icon: 'fa-solid fa-mailbox',
+		subtitle: '',
+		background: '#52565e',
+	},
+	{
+		title: 'Merch Store',
+		href: 'https://www.teepublic.com/user/blueharvestpodcast',
+		icon: 'fa-solid fa-store',
+		// subtitle: 'Moisture farmer swag',
+		background: '#19b1ff',
+	},
+	{
+		title: 'Google Play',
+		href: 'https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkLnBvZGJlYW4uY29tL2JsdWVoYXJ2ZXN0cG9kY2FzdC9mZWVkLnhtbA',
+		icon: 'fa-brands fa-google-play',
+		subtitle: '',
+		background: '#4285f4',
+	},
+	{
+		title: 'Stitcher',
+		href: 'https://www.stitcher.com/show/blue-harvest-a-star-wars-podcast',
+		icon: 'fa-solid fa-waveform',
+		subtitle: '',
+		background: '#ec8900',
+	},
+	{
+		title: 'PodBean',
+		href: 'https://blueharvestpodcast.podbean.com/',
+		icon: 'fa-solid fa-coffee-beans',
+		subtitle: '',
+		background: '#8fc31f',
+	},
+	{
+		title: 'YouTube',
+		href: 'https://www.youtube.com/BlueHarvestAStarWarsPodcast',
+		icon: 'fa-brands fa-youtube',
+		subtitle: '',
+		background: '#ff0000',
+	},
+	{
+		title: 'Stoned Cobra',
+		href: 'http://stonedcobra.bandcamp.com/',
+		icon: 'fa-solid fa-snake',
+		subtitle: '',
+		background: '#3CC70F',
+	},
+]
+
+export default items

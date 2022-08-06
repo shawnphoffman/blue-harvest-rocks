@@ -15,7 +15,7 @@ const Routes = {
 	Home: {
 		path: '',
 		component: Home,
-		icon: 'fa-calendar-days',
+		// icon: 'fa-calendar-days',
 		title: 'Home',
 	},
 }

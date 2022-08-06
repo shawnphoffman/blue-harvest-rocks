@@ -4,7 +4,7 @@ import { styled } from 'linaria/react'
 
 const variants = {
 	visible: i => ({
-		opacity: 0.75,
+		opacity: 0.85,
 		y: 0,
 		transition: {
 			delay: i * 0.1,
@@ -62,6 +62,7 @@ const Cover = styled.div`
 	justify-content: center;
 	align-items: center;
 	font-size: 48px;
+	color: var(--white);
 `
 const Data = styled.div`
 	margin-top: 5px;

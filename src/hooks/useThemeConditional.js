@@ -2,68 +2,40 @@ import { css } from '@linaria/core'
 
 const dark = css`
 	--bg: #111;
-	--outline: #1d1f26;
-	--outlineHover: #18161e;
 	--text: #fff;
 	--link: #fff;
 	--linkAlt: #a0a8d9;
-	--linkHover: #bbb;
-	--linkActive: #304ffe;
-	--heart: #ff1493;
-	--download: #ff540d;
-	--inactive: #333;
-	--transparent: #0000;
-	--inputBg: #fff;
-	--inputBorder: #000;
-	--day1: #042940;
-	--day2: #174001;
-	--day3: #400a40;
-	--day4: #40290a;
-	--fallback: yellow;
-	--green: #32de84;
+	--orange1: #fbb33e;
+	--orange2: #b97507;
+	--white: #fff;
 
 	color: var(--text);
 
 	a {
-		color: var(--link);
+		color: var(--text);
 		text-decoration: none;
 		&:hover {
-			color: var(--link);
-			/* text-decoration: underline; */
+			color: var(--text);
 		}
 	}
 `
 
 const light = css`
-	--bg: #eee;
-	--outline: #ddd;
-	--outlineHover: #ccc;
+	--bg: #ccc;
 	--text: #000;
 	--link: #333;
 	--linkAlt: #3e498c;
-	--linkHover: #666;
-	--linkActive: #304ffe;
-	--heart: #fa48a7;
-	--download: #be060c;
-	--inactive: #333;
-	--transparent: #0000;
-	--inputBg: #fff;
-	--inputBorder: #000;
-	--day1: #97bfd7;
-	--day2: #b2c8a6;
-	--day3: #bbaabb;
-	--day4: #c1aa8d;
-	--fallback: yellow;
-	--green: #32de84;
+	--orange1: #4556e9;
+	--orange2: #05116f;
+	--white: #fff;
 
 	color: var(--text);
 
 	a {
-		color: var(--link);
+		color: var(--text);
 		text-decoration: none;
 		&:hover {
-			color: var(--link);
-			/* text-decoration: underline; */
+			color: var(--text);
 		}
 	}
 `

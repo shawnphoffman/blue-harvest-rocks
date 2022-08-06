@@ -8,7 +8,7 @@ export const useDeviceTheme = () => {
 	const mediaListenerHandler = useCallback(matches => (matches ? setDeviceTheme('dark') : setDeviceTheme('light')), [setDeviceTheme])
 
 	useEffect(() => {
-		const rootBgColor = deviceTheme === 'dark' ? '#111' : '#eee'
+		const rootBgColor = deviceTheme === 'dark' ? '#111' : '#ccc'
 		document.documentElement.setAttribute('style', `background: ${rootBgColor}`)
 	}, [deviceTheme])
 

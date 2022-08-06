@@ -26,7 +26,7 @@ const Home = () => {
 							link={item.href}
 							cover={item.image}
 							icon={item.icon}
-							bg={item.background || 'white'}
+							bg={item.background}
 						></LinkCard>
 					)
 				})}
@@ -66,7 +66,7 @@ const Heading = styled(motion.h1)`
 	color: rgb(235, 169, 60);
 
 	transform-style: preserve-3d;
-	background: -webkit-linear-gradient(#fbb33e, #b97507);
+	background: -webkit-linear-gradient(var(--orange1), var(--orange2));
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;

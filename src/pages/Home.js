@@ -67,6 +67,7 @@ const Heading = styled(motion.h1)`
 
 	transform-style: preserve-3d;
 	background: -webkit-linear-gradient(#fbb33e, #b97507);
+	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 

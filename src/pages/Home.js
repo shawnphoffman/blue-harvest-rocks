@@ -10,7 +10,6 @@ const Home = () => {
 		<Container>
 			<Details>
 				<Heading whileHover={{ scale: 1.3, skewX: -15, rotateY: -5, rotateX: 18 }}>Blue Harvest</Heading>
-				{/* <Heading whileHover={{ scale: 1.2, skewX: -10, transformPerspective: 400, rotateY: -10 }}>Blue Harvest</Heading> */}
 				<Description>
 					Star Wars podcast hosted by Hawes Burkhardt and Will Whitten. Available on iTunes, Spotify and Google Play. We've got Star Wars
 					ants in our Star Wars pants.
@@ -63,13 +62,14 @@ const Heading = styled(motion.h1)`
 	font-family: 'Work Sans', sans-serif;
 	text-transform: uppercase;
 	font-size: 80px;
-	margin: 24px;
+	margin: 24px 48px;
 	color: rgb(235, 169, 60);
 	transform-style: preserve-3d;
 
-	@media (max-width: ${smallBreakpoint}) {
+	/* @media (max-width: ${smallBreakpoint}) { */
+	@media (max-width: 600px) {
 		font-size: 60px;
-		margin: 16px;
+		margin: 16px 48px;
 	}
 `
 const Description = styled.div`

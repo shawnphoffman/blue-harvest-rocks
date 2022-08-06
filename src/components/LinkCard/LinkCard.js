@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { memo } from 'react'
 import { motion } from 'framer-motion'
 import { styled } from 'linaria/react'
 
 const variants = {
 	visible: i => ({
-		opacity: 1,
+		opacity: 0.75,
 		y: 0,
 		transition: {
 			delay: i * 0.1,
@@ -17,9 +17,16 @@ const variants = {
 	hidden: { opacity: 0, y: 200 },
 }
 
-function LinkCard({ i, link, bg, icon, title, subtitle }) {
+const LinkCard = ({ i, link, bg, icon, title, subtitle }) => {
 	return (
-		<Card initial="hidden" animate="visible" custom={i} variants={variants}>
+		<Card
+			initial="hidden"
+			animate="visible"
+			custom={i}
+			whileHover={{ opacity: 1, scale: 1.05, skewY: -2 }}
+			whileTap={{ scale: 0.9 }}
+			variants={variants}
+		>
 			<a href={link} target="_blank" rel="noopener noreferrer">
 				<Cover bg={bg}>
 					<i className={icon}></i>
@@ -69,4 +76,4 @@ const Subtitle = styled.p`
 	margin: 8px 0;
 `
 
-export default LinkCard
+export default memo(LinkCard)

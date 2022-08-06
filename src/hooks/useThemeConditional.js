@@ -29,7 +29,7 @@ const dark = css`
 		text-decoration: none;
 		&:hover {
 			color: var(--link);
-			text-decoration: underline;
+			/* text-decoration: underline; */
 		}
 	}
 `
@@ -63,7 +63,7 @@ const light = css`
 		text-decoration: none;
 		&:hover {
 			color: var(--link);
-			text-decoration: underline;
+			/* text-decoration: underline; */
 		}
 	}
 `

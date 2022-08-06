@@ -64,7 +64,11 @@ const Heading = styled(motion.h1)`
 	font-size: 80px;
 	margin: 24px 48px;
 	color: rgb(235, 169, 60);
+
 	transform-style: preserve-3d;
+	background: -webkit-linear-gradient(#fbb33e, #b97507);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 
 	/* @media (max-width: ${smallBreakpoint}) { */
 	@media (max-width: 600px) {

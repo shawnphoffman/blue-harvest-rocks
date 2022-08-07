@@ -15,7 +15,7 @@ const items = [
 	},
 	{
 		title: 'Apple Podcasts',
-		href: 'https://podcasts.apple.com/us/podcast/blue-harvest-a-star-wars-podcast/id1009917662',
+		href: 'https://podcasts.apple.com/us/podcast/blue-harvest-a-star-wars-podcast/id1009917662?itsct=podcast_box&itscg=30200&ls=1',
 		icon: 'fa-solid fa-podcast',
 		subtitle: '',
 		background: '#872EC4',
@@ -42,9 +42,17 @@ const items = [
 		background: '#52565e',
 	},
 	{
+		title: 'Overcast',
+		// overcast://x-callback-url/add?url=https%3A%2F%2Ffeed.podbean.com%2Fblueharvestpodcast%2Ffeed.xml
+		href: 'https://overcast.fm/itunes1009917662',
+		icon: 'fak fa-overcast fa-lg',
+		subtitle: '',
+		background: '#fc7e0f',
+	},
+	{
 		title: 'Merch Store',
 		href: 'https://www.teepublic.com/user/blueharvestpodcast',
-		icon: 'fa-solid fa-store',
+		icon: 'fa-solid fa-shirt',
 		// subtitle: 'Moisture farmer swag',
 		background: '#19b1ff',
 	},
@@ -75,6 +83,13 @@ const items = [
 		icon: 'fa-brands fa-youtube',
 		subtitle: '',
 		background: '#ff0000',
+	},
+	{
+		title: 'RSS',
+		href: 'https://feed.podbean.com/blueharvestpodcast/feed.xml',
+		icon: 'fa-solid fa-rss',
+		subtitle: '',
+		background: '#0000ff',
 	},
 	{
 		title: 'Stoned Cobra',

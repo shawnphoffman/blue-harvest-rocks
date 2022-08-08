@@ -12,7 +12,10 @@ import reportWebVitals from './reportWebVitals'
 
 // Analytics
 if (process.env.REACT_APP_PANELBEAR_SITE_ID) {
-	Panelbear.load(process.env.REACT_APP_PANELBEAR_SITE_ID)
+	Panelbear.load(process.env.REACT_APP_PANELBEAR_SITE_ID, {
+		spaMode: 'history',
+		includeURLFragment: true,
+	})
 	Panelbear.trackPageview()
 }
 

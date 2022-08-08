@@ -1,14 +1,22 @@
 import { memo, Suspense } from 'react'
-// import { NavLink } from 'react-router-dom'
 import * as Sentry from '@sentry/react'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { styled } from 'linaria/react'
 
-// import { NavRoutes, preloadRouteComponent } from 'config/routes'
 import ThemeProvider from 'context/ThemeContext'
 import { useDeviceTheme } from 'hooks/useDeviceTheme'
 import themeConditional from 'hooks/useThemeConditional'
 
 import AppRoutes from './AppRoutes'
+
+const queryClient = new QueryClient({
+	defaultOptions: {
+		queries: {
+			suspense: true,
+			staleTime: 30000,
+		},
+	},
+})
 
 function App() {
 	const theme = useDeviceTheme()
@@ -19,12 +27,9 @@ function App() {
 			<ThemeProvider>
 				<ThemeContainer className={themeClass}>
 					<Suspense fallback={<div>Loading...</div>}>
-						{/* {NavRoutes.map(r => (
-							<NavLink to={r.path} title={r.title} key={r.title} onMouseEnter={() => preloadRouteComponent(r.component)}>
-								{r.title}
-							</NavLink>
-						))} */}
-						<AppRoutes />
+						<QueryClientProvider client={queryClient}>
+							<AppRoutes />
+						</QueryClientProvider>
 					</Suspense>
 				</ThemeContainer>
 			</ThemeProvider>

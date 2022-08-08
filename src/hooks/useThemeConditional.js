@@ -2,12 +2,14 @@ import { css } from '@linaria/core'
 
 const dark = css`
 	--bg: #111;
+	--outline: #1d1f26;
 	--text: #fff;
 	--link: #fff;
 	--linkAlt: #a0a8d9;
 	--orange1: #fbb33e;
 	--orange2: #b97507;
 	--white: #fff;
+	--patreon: #f96854;
 
 	color: var(--text);
 

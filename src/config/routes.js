@@ -13,16 +13,16 @@ const Patreon = LazyPreload(() => import('../pages/Patreon'))
 // https://reactrouter.com/docs/en/v6/hooks/use-routes
 
 const Routes = {
-	Patreon: {
-		path: '/patreon',
-		component: Patreon,
-		title: 'Patreon',
-	},
 	Home: {
-		path: '',
+		path: '/',
 		component: Home,
 		// icon: 'fa-calendar-days',
 		title: 'Home',
+	},
+	Patreon: {
+		path: '/patreon',
+		component: Patreon,
+		title: 'Patreon Preview',
 	},
 }
 

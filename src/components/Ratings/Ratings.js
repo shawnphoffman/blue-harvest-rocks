@@ -13,6 +13,7 @@ const Container = styled.a`
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	white-space: nowrap;
 `
 const Value = styled.div``
 const Star = styled.i`
@@ -24,7 +25,7 @@ const Byline = styled.div``
 
 const dataUrl = 'https://gist.githubusercontent.com/shawnphoffman/c55f43ff44ab0fee42b85cf816c07ec5/raw'
 const Ratings = () => {
-	const { isLoading, data, error } = useQuery(['patreon-data'], () => fetch(dataUrl).then(res => res.json()), {
+	const { isLoading, data, error } = useQuery(['ratings-data'], () => fetch(dataUrl).then(res => res.json()), {
 		cacheTime: 30 * 60 * 1000,
 	})
 

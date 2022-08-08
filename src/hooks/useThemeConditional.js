@@ -10,6 +10,7 @@ const dark = css`
 	--orange2: #b97507;
 	--white: #fff;
 	--patreon: #f96854;
+	--applePodcasts: #872ec4;
 
 	color: var(--text);
 

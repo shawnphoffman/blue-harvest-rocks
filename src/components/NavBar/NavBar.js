@@ -14,6 +14,9 @@ const Link = styled(NavLink)`
 	&:hover {
 		color: var(--orange1) !important;
 	}
+	&.active {
+		border-bottom: 1px solid var(--text);
+	}
 `
 
 const NavBar = () => {

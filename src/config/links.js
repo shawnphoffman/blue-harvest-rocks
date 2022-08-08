@@ -11,14 +11,15 @@ const items = [
 		href: 'https://www.patreon.com/blueharvestpodcast',
 		icon: 'fa-brands fa-patreon',
 		subtitle: '',
-		background: '#f96854',
+		// background: '#f96854',
+		background: 'var(--patreon)',
 	},
 	{
 		title: 'Apple Podcasts',
 		href: 'https://podcasts.apple.com/us/podcast/blue-harvest-a-star-wars-podcast/id1009917662?itsct=podcast_box&itscg=30200&ls=1',
 		icon: 'fa-solid fa-podcast',
 		subtitle: '',
-		background: '#872EC4',
+		background: 'var(--applePodcasts)',
 	},
 	{
 		title: 'Spotify',

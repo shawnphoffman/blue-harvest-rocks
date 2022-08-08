@@ -4,6 +4,7 @@ import { styled } from 'linaria/react'
 import Header from 'components/Header/Header'
 import LinkCard from 'components/LinkCard/LinkCard'
 import NavBar from 'components/NavBar/NavBar'
+import Ratings from 'components/Ratings/Ratings'
 import items from 'config/links'
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
 					A Star Wars podcast hosted by two long time friends, Hawes Burkhardt and Will Whitten. Check out the Patreon for even more
 					exclusive content.
 				</Description>
+				<Ratings />
 			</Details>
 			<Row>
 				{items.map((item, i) => {
@@ -67,7 +69,7 @@ const Row = styled.div`
 `
 const Details = styled.div`
 	text-align: center;
-	margin-bottom: 32px;
+	margin-bottom: 16px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;

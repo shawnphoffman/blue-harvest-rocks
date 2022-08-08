@@ -2,6 +2,7 @@ import { memo } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { styled } from 'linaria/react'
 
+import GenericError from 'components/GenericError/GenericError'
 import Header from 'components/Header/Header'
 import NavBar from 'components/NavBar/NavBar'
 import PatreonEntry from 'components/PatreonEntry/PatreonEntry'
@@ -19,13 +20,7 @@ const Patreon = () => {
 				<Header />
 				<NavBar />
 				{isLoading && <Loader className="fa-solid fa-space-station-moon-construction fa-beat-fade" />}
-				{error && (
-					<div>
-						<ErrorHeading>Uh-Oh!</ErrorHeading>
-						<ErrorDesc>Something went wrong...</ErrorDesc>
-						<Loader className="fa-solid fa-skull fa-beat-fade" />
-					</div>
-				)}
+				{error && <GenericError />}
 				{!!data && (
 					<>
 						<Description>
@@ -71,13 +66,6 @@ const Description = styled.div`
 	@media (max-width: ${smallBreakpoint}) {
 		font-size: 16px;
 	}
-`
-const ErrorDesc = styled.div`
-	margin: 16px;
-`
-const ErrorHeading = styled.div`
-	font-size: 48px;
-	font-weight: bold;
 `
 const Loader = styled.i`
 	font-size: 64px;

@@ -2,12 +2,15 @@ import { memo } from 'react'
 import { motion } from 'framer-motion'
 import { styled } from 'linaria/react'
 
+// https://gist.githubusercontent.com/shawnphoffman/79c2299232a71cfb7a2dc8768e651857/raw/2e93b08cc51a0bf11222deb25e741a4b6836754b/bh-patreon.json
+
 const Patreon = () => {
 	return (
 		<Container>
 			<Details>
-				{/* <Heading whileHover={{ scale: 1.3, skewX: -15, rotateY: -5, rotateX: 18 }}>Blue Harvest</Heading> */}
+				<Heading whileHover={{ scale: 1.3, skewX: -15, rotateY: -5, rotateX: 18 }}>Blue Harvest</Heading>
 				<Description>Patreon content preview.</Description>
+				<Row></Row>
 			</Details>
 		</Container>
 	)

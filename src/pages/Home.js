@@ -108,5 +108,6 @@ const IFrame = styled.iframe`
 	overflow: hidden;
 	border-radius: 10px;
 	background: transparent;
+	border: none;
 `
 export default memo(Home)

@@ -83,6 +83,6 @@ const Loader = styled.i`
 	font-size: 64px;
 `
 const Entries = styled.div`
-	margin: 32px;
+	margin: 32px 0px;
 `
 export default memo(Patreon)

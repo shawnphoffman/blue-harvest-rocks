@@ -11,7 +11,6 @@ const items = [
 		href: 'https://www.patreon.com/blueharvestpodcast',
 		icon: 'fa-brands fa-patreon',
 		subtitle: '',
-		// background: '#f96854',
 		background: 'var(--patreon)',
 	},
 	{
@@ -34,6 +33,13 @@ const items = [
 		icon: 'fa-brands fa-twitch',
 		subtitle: '',
 		background: '#9146ff',
+	},
+	{
+		title: 'Instagram',
+		href: 'https://www.instagram.com/blueharvestpod',
+		icon: 'fa-brands fa-instagram',
+		subtitle: '',
+		background: '#c13584',
 	},
 	{
 		title: 'Voicemails & Emails',

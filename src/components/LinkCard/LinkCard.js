@@ -1,4 +1,5 @@
-import React, { memo } from 'react'
+import { memo, useCallback } from 'react'
+import * as Panelbear from '@panelbear/panelbear-js'
 import { motion } from 'framer-motion'
 import { styled } from 'linaria/react'
 
@@ -18,6 +19,10 @@ const variants = {
 }
 
 const LinkCard = ({ i, link, bg, icon, title, subtitle }) => {
+	const logClickEvent = useCallback(() => {
+		Panelbear.track(`LinkClick-${title.replace(/[^A-Za-z]+/g, '')}`)
+	}, [title])
+
 	return (
 		<Card
 			initial="hidden"
@@ -26,6 +31,7 @@ const LinkCard = ({ i, link, bg, icon, title, subtitle }) => {
 			whileHover={{ opacity: 1, scale: 1.05, skewY: -2 }}
 			whileTap={{ scale: 0.9 }}
 			variants={variants}
+			onClick={logClickEvent}
 		>
 			<a href={link} target="_blank" rel="noopener noreferrer">
 				<Cover bg={bg}>

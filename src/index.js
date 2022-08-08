@@ -15,6 +15,7 @@ if (process.env.REACT_APP_PANELBEAR_SITE_ID) {
 	Panelbear.load(process.env.REACT_APP_PANELBEAR_SITE_ID, {
 		spaMode: 'history',
 		includeURLFragment: true,
+		debug: process.env.NODE_ENV === 'development',
 	})
 	Panelbear.trackPageview()
 }

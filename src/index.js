@@ -2,7 +2,7 @@ import './index.css'
 
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { HashRouter as Router } from 'react-router-dom'
+import { createRoutesFromChildren, HashRouter as Router, matchRoutes, useLocation, useNavigationType } from 'react-router-dom'
 import * as Panelbear from '@panelbear/panelbear-js'
 import * as Sentry from '@sentry/react'
 import { BrowserTracing } from '@sentry/tracing'
@@ -23,7 +23,17 @@ if (process.env.REACT_APP_PANELBEAR_SITE_ID) {
 if (process.env.NODE_ENV === 'production') {
 	Sentry.init({
 		dsn: 'https://720c2cd59d0f4496b09db599832cfbd4@o508348.ingest.sentry.io/6632775',
-		integrations: [new BrowserTracing()],
+		integrations: [
+			new BrowserTracing({
+				routingInstrumentation: Sentry.reactRouterV6Instrumentation(
+					React.useEffect,
+					useLocation,
+					useNavigationType,
+					createRoutesFromChildren,
+					matchRoutes
+				),
+			}),
+		],
 		autoSessionTracking: true,
 		environment: process.env.NODE_ENV,
 		// We recommend adjusting this value in production

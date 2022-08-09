@@ -1,6 +1,6 @@
 import { memo, useCallback } from 'react'
 import * as Panelbear from '@panelbear/panelbear-js'
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import { styled } from 'linaria/react'
 
 const variants = {
@@ -46,7 +46,7 @@ const LinkCard = ({ i, link, bg, icon, title, subtitle }) => {
 	)
 }
 
-const Card = styled(motion.div)`
+const Card = styled(m.div)`
 	padding: 8px;
 	border-radius: 8px;
 	min-height: 155px;

@@ -1,11 +1,11 @@
 import { memo } from 'react'
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import { styled } from 'linaria/react'
 
 const Header = () => {
 	return <Heading whileHover={{ scale: 1.3, skewX: -15, rotateY: -5, rotateX: 18 }}>Blue Harvest</Heading>
 }
-const Heading = styled(motion.h1)`
+const Heading = styled(m.h1)`
 	font-family: 'Work Sans', sans-serif;
 	text-transform: uppercase;
 	font-size: 80px;

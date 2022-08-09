@@ -1,12 +1,14 @@
 import { lazy } from 'react'
 
+import Home from 'pages/Home'
+
 const LazyPreload = importStatement => {
 	const Component = lazy(importStatement)
 	Component.preload = importStatement
 	return Component
 }
 
-const Home = LazyPreload(() => import('../pages/Home'))
+// const Home = LazyPreload(() => import('../pages/Home'))
 const Patreon = LazyPreload(() => import('../pages/Patreon'))
 
 // Change to conform to API?

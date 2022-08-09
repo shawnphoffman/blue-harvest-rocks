@@ -8,7 +8,7 @@ const LazyPreload = importStatement => {
 	return Component
 }
 
-// const Home = LazyPreload(() => import('../pages/Home'))
+const Listen = LazyPreload(() => import('../pages/Listen'))
 const Patreon = LazyPreload(() => import('../pages/Patreon'))
 
 // Change to conform to API?
@@ -26,11 +26,16 @@ const Routes = {
 		component: Patreon,
 		title: 'Patreon Preview',
 	},
+	Listen: {
+		path: '/listen',
+		component: Listen,
+		title: 'Listen Now',
+	},
 }
 
-export const RegisteredRoutes = [Routes.Patreon, Routes.Home]
+export const RegisteredRoutes = [Routes.Patreon, Routes.Listen, Routes.Home]
 
-export const NavRoutes = [Routes.Home, Routes.Patreon]
+export const NavRoutes = [Routes.Home, Routes.Patreon, Routes.Listen]
 
 export const preloadRouteComponent = component => {
 	if (component && component.preload) {

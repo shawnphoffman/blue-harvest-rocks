@@ -2,6 +2,7 @@ import { memo, Suspense } from 'react'
 import { Route, Routes as RouterRoutes } from 'react-router-dom'
 import * as Sentry from '@sentry/react'
 
+import Loading from 'components/Loading/Loading'
 import { RegisteredRoutes } from 'config/routes'
 
 const SentryRoutes = Sentry.withSentryReactRouterV6Routing(RouterRoutes)
@@ -17,7 +18,7 @@ const AppRoutes = () => {
 						key={path}
 						path={path}
 						element={
-							<Suspense fallback={l.fallback}>
+							<Suspense fallback={<Loading />}>
 								<Comp />
 							</Suspense>
 						}

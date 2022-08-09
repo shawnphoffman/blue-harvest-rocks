@@ -39,11 +39,7 @@ if (process.env.NODE_ENV === 'production') {
 		// We recommend adjusting this value in production
 		tracesSampleRate: 1.0,
 		beforeSend(event, hint) {
-			console.log({ event, hint })
-			// const error = hint.originalException
-			// if (error && !!error.match(/cancelled/i)) {
-			// 	return event
-			// }
+			// console.log({ event, hint })
 			// Check if it is an exception, and if so, show the report dialog
 			if (event.exception) {
 				Sentry.showReportDialog({

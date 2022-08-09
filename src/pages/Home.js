@@ -7,6 +7,8 @@ import NavBar from 'components/NavBar/NavBar'
 import Ratings from 'components/Ratings/Ratings'
 import items from 'config/links'
 
+// https://danq.me/2021/06/02/twitter-avatar-scraping/
+
 const Home = () => {
 	return (
 		<Container>

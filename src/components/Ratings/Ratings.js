@@ -36,7 +36,7 @@ const Ratings = () => {
 	return (
 		<Container href={data.appleRatingUrl || ''} target="_blank" rel="noopener noreferrer">
 			<Value>{data.appleRating}</Value>
-			<Star className="fa-solid fa-star-sharp" />
+			<Star className="fa-solid fa-star-sharp" title="Stars" />
 			<Byline>on Apple Podcasts</Byline>
 		</Container>
 	)

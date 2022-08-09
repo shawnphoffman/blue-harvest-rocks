@@ -1,6 +1,6 @@
 const { loaderByName, getLoader } = require('@craco/craco')
 const transformBabelLoader = require('./config/transformBabelLoader')
-const HTMLInlineCSSWebpackPlugin = require('html-inline-css-webpack-plugin').default
+// const HTMLInlineCSSWebpackPlugin = require('html-inline-css-webpack-plugin').default
 
 module.exports = {
 	webpack: {
@@ -12,7 +12,7 @@ module.exports = {
 			webpackConfig.module.rules[1].oneOf[2] = transformBabelLoader(loader)
 
 			// Inline main.css
-			webpackConfig.plugins.push(new HTMLInlineCSSWebpackPlugin({}))
+			// webpackConfig.plugins.push(new HTMLInlineCSSWebpackPlugin({}))
 
 			return webpackConfig
 		},

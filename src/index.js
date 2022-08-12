@@ -12,6 +12,7 @@ import reportWebVitals from './reportWebVitals'
 
 // Analytics
 if (process.env.REACT_APP_PANELBEAR_SITE_ID) {
+	console.log('Load Panelbear')
 	Panelbear.load(process.env.REACT_APP_PANELBEAR_SITE_ID, {
 		spaMode: 'history',
 		includeURLFragment: true,
@@ -19,6 +20,8 @@ if (process.env.REACT_APP_PANELBEAR_SITE_ID) {
 		debug: true,
 	})
 	Panelbear.trackPageview()
+} else {
+	console.log('Skip Panelbear')
 }
 
 if (process.env.NODE_ENV === 'production') {

@@ -33,7 +33,7 @@ export default function Document() {
 				/>
 				{/* <!-- FontAwesome Icons --> */}
 				{/* <script src="https://kit.fontawesome.com/d7ccc5bb1a.js" crossOrigin="anonymous" defer></script> */}
-				<Script src="https://kit.fontawesome.com/d7ccc5bb1a.js" crossOrigin="anonymous" strategy="afterInteractive" />
+				<Script src="https://kit.fontawesome.com/d7ccc5bb1a.js" strategy="afterInteractive" />
 			</Head>
 			<body>
 				<Main />

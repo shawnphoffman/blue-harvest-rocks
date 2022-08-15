@@ -1,7 +1,7 @@
 import { memo } from 'react'
 import { styled } from 'linaria/react'
 
-const Listen = () => {
+const ListenNow = () => {
 	return (
 		<Details>
 			<Row>
@@ -46,4 +46,5 @@ const IFrame = styled.iframe`
 	background: transparent;
 	border: none;
 `
-export default memo(Listen)
+
+export default memo(ListenNow)

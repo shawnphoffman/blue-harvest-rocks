@@ -1,34 +1,36 @@
 import { memo } from 'react'
-import { useQuery } from '@tanstack/react-query'
 import { styled } from 'linaria/react'
 
-import GenericError from 'components/GenericError/GenericError'
 import PatreonEntry from 'components/PatreonEntry/PatreonEntry'
 
 const dataUrl = 'https://gist.githubusercontent.com/shawnphoffman/79c2299232a71cfb7a2dc8768e651857/raw'
 
-const Patreon = () => {
-	const { isLoading, data, error } = useQuery(['patreon-data'], () => fetch(dataUrl).then(res => res.json()), {
-		cacheTime: 30 * 60 * 1000,
-	})
+// Server data fetch
+export async function getServerSideProps(context) {
+	const res = await fetch(dataUrl)
+	const data = await res.json()
 
+	context.res.setHeader('Cache-Control', 'public, s-maxage=600, stale-while-revalidate=300')
+
+	return {
+		props: {
+			data,
+		},
+	}
+}
+
+const PatreonPreview = ({ data }) => {
 	return (
 		<Details>
-			{isLoading && <Loader className="fa-solid fa-space-station-moon-construction fa-beat-fade" />}
-			{error && <GenericError />}
-			{!!data && (
-				<>
-					<Description>
-						Here is a preview of some of the most recent amazing Blue Harvest Patreon content. <strong>This</strong> is the content you're
-						looking for.
-					</Description>
-					<Entries>
-						{data.map(d => (
-							<PatreonEntry key={d.guid} data={d} />
-						))}
-					</Entries>
-				</>
-			)}
+			<Description>
+				Here is a preview of some of the most recent amazing Blue Harvest Patreon content. <strong>This</strong> is the content you're
+				looking for.
+			</Description>
+			<Entries>
+				{data.map(d => (
+					<PatreonEntry key={d.guid} data={d} />
+				))}
+			</Entries>
 		</Details>
 	)
 }
@@ -61,4 +63,5 @@ const Loader = styled.i`
 const Entries = styled.div`
 	margin: 32px 0px;
 `
-export default memo(Patreon)
+
+export default memo(PatreonPreview)

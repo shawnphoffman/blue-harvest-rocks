@@ -34,7 +34,7 @@ const LinkCard = ({ i, link, bg, icon, title, subtitle }) => {
 			onClick={logClickEvent}
 		>
 			<a href={link} target="_blank" rel="noopener noreferrer">
-				<Cover bg={bg}>
+				<Cover style={{ background: bg }}>
 					<i className={icon}></i>
 				</Cover>
 				<Data>
@@ -63,7 +63,6 @@ const Cover = styled.div`
 	object-fit: cover;
 	border-radius: 8px;
 	height: 94px;
-	background: ${p => p.bg};
 	display: flex;
 	justify-content: center;
 	align-items: center;

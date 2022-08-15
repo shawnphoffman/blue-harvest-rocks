@@ -1,11 +1,10 @@
 import { memo } from 'react'
 import { styled } from 'linaria/react'
 
+// import Image from 'next/image'
 import LinkCard from 'components/LinkCard/LinkCard'
-import Ratings from 'components/Ratings/Ratings'
+// import Ratings from 'components/Ratings/Ratings'
 import items from 'config/links'
-
-// https://danq.me/2021/06/02/twitter-avatar-scraping/
 
 const Home = () => {
 	return (
@@ -15,7 +14,7 @@ const Home = () => {
 					A Star Wars podcast hosted by two long time friends, Hawes Burkhardt and Will Whitten. Check out the Patreon for even more
 					exclusive content.
 				</Description>
-				<Ratings />
+				{/* <Ratings /> */}
 			</Details>
 			<Row>
 				{items.map((item, i) => {
@@ -36,6 +35,7 @@ const Home = () => {
 		</>
 	)
 }
+
 const smallBreakpoint = '420px'
 const Details = styled.div`
 	text-align: center;
@@ -63,4 +63,5 @@ const Description = styled.div`
 		font-size: 16px;
 	}
 `
+
 export default memo(Home)

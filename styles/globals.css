@@ -1,0 +1,45 @@
+:root {
+	--bg: #111;
+	--outline: #1d1f26;
+	--text: #fff;
+	--link: #fff;
+	--linkAlt: #a0a8d9;
+	--orange1: #fbb33e;
+	--orange2: #b97507;
+	--white: #fff;
+	--patreon: #f96854;
+	--applePodcasts: #872ec4;
+}
+
+* {
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+}
+
+html body {
+	font-size: 16px;
+	padding: 0;
+	margin: 0;
+	width: 100vw;
+	font-family: 'Open Sans', sans-serif;
+	box-sizing: border-box;
+	color: var(--text);
+	background: var(--bg);
+}
+
+#__next {
+	width: 100%;
+	height: 100%;
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0px 16px 32px 16px;
+}
+
+a {
+	color: var(--text);
+	text-decoration: none;
+}
+a:hover {
+	color: var(--text);
+}

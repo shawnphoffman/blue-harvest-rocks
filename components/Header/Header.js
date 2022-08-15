@@ -10,7 +10,7 @@ const Heading = styled(m.h1)`
 	text-transform: uppercase;
 	font-size: 80px;
 	margin: 24px 48px;
-	color: rgb(235, 169, 60);
+	color: var(--orange1);
 
 	transform-style: preserve-3d;
 	background: -webkit-linear-gradient(var(--orange1), var(--orange2));

@@ -35,7 +35,7 @@ const LinkCard = ({ i, link, bg, icon, title, subtitle }) => {
 		>
 			<a href={link} target="_blank" rel="noopener noreferrer">
 				<Cover style={{ background: bg }}>
-					<i className={icon}></i>
+					<i className={icon} aria-hidden="true"></i>
 				</Cover>
 				<Data>
 					<Title>{title}</Title>

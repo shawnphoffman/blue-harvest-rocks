@@ -1,12 +1,28 @@
 import { memo } from 'react'
 import { styled } from 'linaria/react'
 
-// import Image from 'next/image'
 import LinkCard from 'components/LinkCard/LinkCard'
-// import Ratings from 'components/Ratings/Ratings'
+import Ratings from 'components/Ratings/Ratings'
 import items from 'config/links'
 
-const Home = () => {
+const dataUrl = 'https://gist.githubusercontent.com/shawnphoffman/c55f43ff44ab0fee42b85cf816c07ec5/raw'
+
+// Server data fetch
+export async function getServerSideProps(context) {
+	const res = await fetch(dataUrl)
+	const data = await res.json()
+
+	context.res.setHeader('Cache-Control', 'public, s-maxage=6000, stale-while-revalidate=3000')
+
+	return {
+		props: {
+			appleRating: data.appleRating,
+			appleRatingUrl: data.appleRatingUrl,
+		},
+	}
+}
+
+const Home = ({ appleRating, appleRatingUrl }) => {
 	return (
 		<>
 			<Details>
@@ -14,7 +30,7 @@ const Home = () => {
 					A Star Wars podcast hosted by two long-time friends, Hawes Burkhardt and Will Whitten. Check out the Patreon for even more
 					exclusive content.
 				</Description>
-				{/* <Ratings /> */}
+				<Ratings appleRating={appleRating} appleRatingUrl={appleRatingUrl} />
 			</Details>
 			<Row>
 				{items.map((item, i) => {

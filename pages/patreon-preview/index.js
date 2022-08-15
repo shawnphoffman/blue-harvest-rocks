@@ -23,7 +23,7 @@ const PatreonPreview = ({ data }) => {
 	return (
 		<Details>
 			<Description>
-				Here is a preview of some of the most recent amazing Blue Harvest Patreon content. <strong>This</strong> is the content you're
+				Here is a preview of some of the most recent amazing Blue Harvest Patreon content. <strong>This</strong> is the content you&apos;re
 				looking for.
 			</Description>
 			<Entries>

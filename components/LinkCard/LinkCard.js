@@ -64,15 +64,19 @@ const LinkCard = ({ i, link, bg, icon, title, subtitle }) => {
 	)
 }
 
-const SuperContainer = styled(m.div)``
+const SuperContainer = styled(m.div)`
+	min-width: 250px;
+	flex: 1 1 300px;
+	max-width: 350px;
+`
 
 const Card = styled(m.div)`
 	padding: 8px;
 	border-radius: 8px;
 	min-height: 155px;
-	min-width: 250px;
+	/* min-width: 250px;
 	flex: 1 1 300px;
-	max-width: 350px;
+	max-width: 350px; */
 
 	@media (min-width: 750px) {
 		margin-bottom: 8px;

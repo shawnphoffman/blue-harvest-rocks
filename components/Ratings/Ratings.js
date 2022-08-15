@@ -2,7 +2,6 @@ import { memo } from 'react'
 import { styled } from 'linaria/react'
 
 const Ratings = props => {
-	console.log('props', props)
 	return (
 		<Container href={props.appleRatingUrl || ''} target="_blank" rel="noopener noreferrer">
 			<Value>{props.appleRating}</Value>

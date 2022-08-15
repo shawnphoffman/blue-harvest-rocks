@@ -1,26 +1,31 @@
 import { memo } from 'react'
-import { m } from 'framer-motion'
 import { styled } from 'linaria/react'
 
+import LogoSvg from 'components/logo.svg'
+
 const Header = () => {
-	return <Heading whileHover={{ scale: 1.3, skewX: -15, rotateY: -5, rotateX: 18 }}>Blue Harvest</Heading>
+	return (
+		<Container>
+			<LogoSvg title="Blue Harvest" />
+		</Container>
+	)
 }
-const Heading = styled(m.h1)`
-	font-family: 'Work Sans', sans-serif;
-	text-transform: uppercase;
-	font-size: 80px;
+const Container = styled.div`
 	margin: 24px 48px;
 	color: var(--orange1);
+	max-width: 400px;
+	width: 100%;
+	transition: filter 200ms linear;
+	will-change: filter;
+	filter: drop-shadow(1px 1px 4px #00f);
 
-	transform-style: preserve-3d;
-	background: -webkit-linear-gradient(var(--orange1), var(--orange2));
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+	&:hover {
+		filter: drop-shadow(5px 5px 3px #0f0);
+	}
 
 	@media (max-width: 600px) {
-		font-size: 60px;
 		margin: 16px 48px;
 	}
 `
+
 export default memo(Header)

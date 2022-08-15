@@ -1,11 +1,17 @@
-import { memo, useCallback } from 'react'
+import { memo, useCallback, useMemo } from 'react'
 import * as Panelbear from '@panelbear/panelbear-js'
 import { m } from 'framer-motion'
 import { styled } from 'linaria/react'
+import Image from 'next/image'
+import Mole1 from 'public/images/monty1.png'
+import Mole2 from 'public/images/monty2.png'
+import Rac1 from 'public/images/raccoon1.png'
+import Rac2 from 'public/images/raccoon6.png'
+import Rac3 from 'public/images/raccoon7.png'
 
 const variants = {
 	visible: i => ({
-		opacity: 0.85,
+		opacity: 1,
 		y: 0,
 		transition: {
 			delay: i * 0.1,
@@ -23,28 +29,42 @@ const LinkCard = ({ i, link, bg, icon, title, subtitle }) => {
 		Panelbear.track(`LinkClick-${title.replace(/[^A-Za-z]+/g, '')}`)
 	}, [title])
 
+	const mod = useMemo(() => Math.floor(Math.random() * (4 - 0 + 1) + 0), [])
+	const ImgSrc = useMemo(() => {
+		// if (mod === 0) return Rac1
+		if (mod === 0) return <Image src={Rac1} alt="" />
+
+		if (mod === 1) return <Image src={Rac2} alt="" />
+
+		if (mod === 2) return <Image src={Rac3} alt="" />
+
+		if (mod === 3) return <Image src={Mole1} alt="" />
+
+		return <Image src={Mole2} alt="" />
+	}, [mod])
+
 	return (
-		<Card
-			initial="hidden"
-			animate="visible"
-			custom={i}
-			whileHover={{ opacity: 1, scale: 1.05, skewY: -2 }}
-			whileTap={{ scale: 0.9 }}
-			variants={variants}
-			onClick={logClickEvent}
-		>
-			<a href={link} target="_blank" rel="noopener noreferrer">
-				<Cover style={{ background: bg }}>
-					<i className={icon} aria-hidden="true"></i>
-				</Cover>
-				<Data>
-					<Title>{title}</Title>
-					{!!subtitle && <Subtitle>{subtitle}</Subtitle>}
-				</Data>
-			</a>
-		</Card>
+		<SuperContainer initial="hidden" animate="visible" custom={i} variants={variants}>
+			<SneakyContainer>
+				{ImgSrc}
+				{/* <Image src={ImgSrc} alt="" /> */}
+			</SneakyContainer>
+			<Card whileHover={{ opacity: 1, scale: 1.05, skewY: -2 }} whileTap={{ scale: 0.9 }} onClick={logClickEvent}>
+				<a href={link} target="_blank" rel="noopener noreferrer">
+					<Cover style={{ background: bg }}>
+						<i className={icon} aria-hidden="true"></i>
+					</Cover>
+					<Data>
+						<Title>{title}</Title>
+						{!!subtitle && <Subtitle>{subtitle}</Subtitle>}
+					</Data>
+				</a>
+			</Card>
+		</SuperContainer>
 	)
 }
+
+const SuperContainer = styled(m.div)``
 
 const Card = styled(m.div)`
 	padding: 8px;
@@ -56,6 +76,21 @@ const Card = styled(m.div)`
 
 	@media (min-width: 750px) {
 		margin-bottom: 8px;
+	}
+`
+
+const SneakyContainer = styled.div`
+	width: 50px;
+	position: relative;
+	top: 8px;
+	height: 0px;
+	right: -22px;
+	transition: top 200ms ease;
+	z-index: -1;
+
+	${SuperContainer}:hover & {
+		top: -21px;
+		opacity: 1;
 	}
 `
 const Cover = styled.div`

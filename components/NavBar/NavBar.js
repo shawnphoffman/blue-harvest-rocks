@@ -31,13 +31,13 @@ const StyledLink = styled.a`
 const NavBar = () => {
 	return (
 		<Container>
-			<ActiveLink href="/" activeClassName="active">
+			<ActiveLink href="/" activeClassName="active" passHref>
 				<StyledLink>Home</StyledLink>
 			</ActiveLink>
-			<ActiveLink href="/patreon-preview" activeClassName="active">
+			<ActiveLink href="/patreon-preview" activeClassName="active" passHref>
 				<StyledLink>Patreon Preview</StyledLink>
 			</ActiveLink>
-			<ActiveLink href="/listen-now" activeClassName="active">
+			<ActiveLink href="/listen-now" activeClassName="active" passHref>
 				<StyledLink>Listen Now</StyledLink>
 			</ActiveLink>
 		</Container>

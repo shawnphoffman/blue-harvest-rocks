@@ -11,7 +11,7 @@ const Home = () => {
 		<>
 			<Details>
 				<Description>
-					A Star Wars podcast hosted by two long time friends, Hawes Burkhardt and Will Whitten. Check out the Patreon for even more
+					A Star Wars podcast hosted by two long-time friends, Hawes Burkhardt and Will Whitten. Check out the Patreon for even more
 					exclusive content.
 				</Description>
 				{/* <Ratings /> */}

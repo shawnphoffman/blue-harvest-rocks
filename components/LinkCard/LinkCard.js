@@ -3,6 +3,7 @@ import * as Panelbear from '@panelbear/panelbear-js'
 import { m } from 'framer-motion'
 import { styled } from 'linaria/react'
 import Image from 'next/image'
+
 import Mole1 from 'public/images/monty1.png'
 import Mole2 from 'public/images/monty2.png'
 import Rac1 from 'public/images/raccoon1.png'
@@ -31,24 +32,20 @@ const LinkCard = ({ i, link, bg, icon, title, subtitle }) => {
 
 	const mod = useMemo(() => Math.floor(Math.random() * (4 - 0 + 1) + 0), [])
 	const ImgSrc = useMemo(() => {
-		// if (mod === 0) return Rac1
-		if (mod === 0) return <Image src={Rac1} alt="" />
+		if (mod === 0) return <Image src={Rac1} alt="" aria-hidden="true" />
 
-		if (mod === 1) return <Image src={Rac2} alt="" />
+		if (mod === 1) return <Image src={Rac2} alt="" aria-hidden="true" />
 
-		if (mod === 2) return <Image src={Rac3} alt="" />
+		if (mod === 2) return <Image src={Rac3} alt="" aria-hidden="true" />
 
-		if (mod === 3) return <Image src={Mole1} alt="" />
+		if (mod === 3) return <Image src={Mole1} alt="" aria-hidden="true" />
 
-		return <Image src={Mole2} alt="" />
+		return <Image src={Mole2} alt="" aria-hidden="true" />
 	}, [mod])
 
 	return (
 		<SuperContainer initial="hidden" animate="visible" custom={i} variants={variants}>
-			<SneakyContainer>
-				{ImgSrc}
-				{/* <Image src={ImgSrc} alt="" /> */}
-			</SneakyContainer>
+			<SneakyContainer>{ImgSrc}</SneakyContainer>
 			<Card whileHover={{ opacity: 1, scale: 1.05, skewY: -2 }} whileTap={{ scale: 0.9 }} onClick={logClickEvent}>
 				<a href={link} target="_blank" rel="noopener noreferrer">
 					<Cover style={{ background: bg }}>
@@ -74,9 +71,6 @@ const Card = styled(m.div)`
 	padding: 8px;
 	border-radius: 8px;
 	min-height: 155px;
-	/* min-width: 250px;
-	flex: 1 1 300px;
-	max-width: 350px; */
 
 	@media (min-width: 750px) {
 		margin-bottom: 8px;

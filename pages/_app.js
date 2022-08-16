@@ -28,7 +28,7 @@ function App({ Component, pageProps }) {
 				<meta property="og:description" content="Star Wars podcast hosted by Hawes Burkhardt and Will Whitten" />
 				{/* TODO Import this */}
 				<meta property="og:image" content="/images/bh512.jpg" />
-				{/* <meta property="og:image" content="https://blueharvest.rocks/bh512.jpg" /> */}
+				{/* <meta property="og:image" content="https://blueharvest.rocks/images/bh512.jpg" /> */}
 				<meta property="og:image:width" content="512" />
 				<meta property="og:image:height" content="512" />
 
@@ -39,8 +39,7 @@ function App({ Component, pageProps }) {
 				<meta name="twitter:title" content="Blue Harvest: A Star Wars Podcast" />
 				<meta name="twitter:description" content="Star Wars podcast hosted by Hawes Burkhardt and Will Whitten" />
 				{/* TODO Import this */}
-				{/* <meta name="twitter:image" content="https://blueharvest.rocks/bh512.jpg" /> */}
-				<meta name="twitter:image" content="/images/bh512.jpg" />
+				<meta name="twitter:image" content="https://blueharvest.rocks/images/bh512.jpg" />
 
 				{/* <!-- Icons --> */}
 				{/* <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/icon-apple-touch-icon.png">

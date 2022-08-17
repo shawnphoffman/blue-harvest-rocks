@@ -19,6 +19,7 @@ export async function getServerSideProps(context) {
 	}
 }
 
+//
 const PatreonPreview = ({ data }) => {
 	return (
 		<Details>

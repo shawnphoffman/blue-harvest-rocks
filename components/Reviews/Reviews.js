@@ -1,4 +1,4 @@
-import { memo } from 'react'
+import { memo, useMemo } from 'react'
 import { styled } from 'linaria/react'
 
 const Stars = memo(({ count }) => {
@@ -22,13 +22,30 @@ const Stars = memo(({ count }) => {
 })
 Stars.displayName = 'Stars'
 
+const filteredAuthors = ['FatKraken66']
+
 const Reviews = ({ reviews }) => {
-	if (!reviews) return null
+	const filteredReviews = useMemo(() => {
+		if (!reviews) return null
+
+		return reviews.reduce((memo, acc) => {
+			if (filteredAuthors.includes(acc.author)) {
+				return memo
+			}
+			if (acc.stars !== '5') {
+				return memo
+			}
+			memo.push(acc)
+			return memo
+		}, [])
+	}, [reviews])
+
+	if (!filteredReviews) return null
 
 	return (
 		<>
 			<Heading>Recent Reviews</Heading>
-			{reviews.map(r => (
+			{filteredReviews.map(r => (
 				<Container key={r.title}>
 					<Header>
 						<Byline>

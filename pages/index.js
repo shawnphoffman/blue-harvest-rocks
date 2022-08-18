@@ -3,6 +3,7 @@ import { styled } from 'linaria/react'
 
 import LinkCard from 'components/LinkCard/LinkCard'
 import Ratings from 'components/Ratings/Ratings'
+import Reviews from 'components/Reviews/Reviews'
 import items from 'config/links'
 
 const dataUrl = 'https://gist.githubusercontent.com/shawnphoffman/c55f43ff44ab0fee42b85cf816c07ec5/raw'
@@ -11,6 +12,14 @@ const dataUrl = 'https://gist.githubusercontent.com/shawnphoffman/c55f43ff44ab0f
 export async function getServerSideProps(context) {
 	const res = await fetch(dataUrl)
 	const data = await res.json()
+	const { jsonUrl } = data
+
+	let reviews = []
+	if (jsonUrl) {
+		const res2 = await fetch(jsonUrl)
+		const data2 = await res2.json()
+		reviews = data2[0]?.reviews
+	}
 
 	context.res.setHeader('Cache-Control', 'public, s-maxage=6000, stale-while-revalidate=3000')
 
@@ -18,11 +27,12 @@ export async function getServerSideProps(context) {
 		props: {
 			appleRating: data.appleRating,
 			appleRatingUrl: data.appleRatingUrl,
+			reviews,
 		},
 	}
 }
 
-const Home = ({ appleRating, appleRatingUrl }) => {
+const Home = ({ appleRating, appleRatingUrl, reviews }) => {
 	return (
 		<>
 			<Details>
@@ -47,6 +57,9 @@ const Home = ({ appleRating, appleRatingUrl }) => {
 						></LinkCard>
 					)
 				})}
+			</Row>
+			<Row>
+				<Reviews reviews={reviews} />
 			</Row>
 		</>
 	)

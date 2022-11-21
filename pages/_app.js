@@ -43,12 +43,11 @@ function App({ Component, pageProps }) {
 				<meta name="twitter:image:alt" content="Hawes and Will drawn as Boba Fett and Fennec Shand on Jabba's throne" />
 
 				{/* <!-- Icons --> */}
-				<link
-					rel="icon"
-					href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%220.6em%22 font-size=%22150%22>🦝</text></svg>"
-				></link>
 				<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 				<link rel="icon" href="/favicon.ico" type="image/x-icon"></link>
+				<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"></link>
+				<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"></link>
+				<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"></link>
 			</Head>
 			<ThemeContainer>
 				<LazyMotion features={loadMotion} strict>

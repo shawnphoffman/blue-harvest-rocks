@@ -71,6 +71,9 @@ const Container = styled.div`
 	flex-direction: column;
 	max-width: 900px;
 	width: 100%;
+	background: transparent url('/Raccoon Transparent.png') center top/contain no-repeat;
+	background-attachment: fixed;
+	background-size: 80%;
 `
 const Details = styled.div`
 	text-align: center;

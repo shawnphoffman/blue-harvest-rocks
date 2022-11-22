@@ -105,6 +105,13 @@ const items = [
 		subtitle: '',
 		background: '#3CC70F',
 	},
+	{
+		title: 'Hive Social',
+		href: 'https://www.hivesocial.app/',
+		icon: 'fak fa-hive-social',
+		subtitle: '@blueharvest',
+		background: '#d34eff',
+	},
 ]
 
 export default items

@@ -100,7 +100,7 @@ const items = [
 	},
 	{
 		title: 'Stoned Cobra',
-		href: 'http://stonedcobra.bandcamp.com/',
+		href: 'https://stonedcobra.bandcamp.com/',
 		icon: 'fa-solid fa-snake',
 		subtitle: '',
 		background: '#3CC70F',

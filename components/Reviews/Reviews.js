@@ -63,7 +63,7 @@ const Reviews = ({ reviews }) => {
 const smallBreakpoint = '600px'
 const Container = styled.div`
 	padding: 8px;
-	border-top: 1px solid var(--outline);
+	/* border-top: 1px solid var(--outline); */
 	justify-content: flex-start;
 	display: flex;
 	flex-direction: column;

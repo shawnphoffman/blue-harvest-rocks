@@ -112,7 +112,7 @@ const Title = styled.h2`
 `
 const Subtitle = styled.p`
 	color: var(--linkAlt);
-	margin: 8px 0;
+	margin: 0 0 8px 0;
 `
 
 export default memo(LinkCard)

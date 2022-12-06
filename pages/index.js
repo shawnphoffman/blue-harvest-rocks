@@ -25,7 +25,7 @@ export async function getServerSideProps(context) {
 
 	let siteVersion = 'blue-harvest'
 	try {
-		if (context.req.headers.host !== 'blueharvest.rocks') {
+		if (context?.req?.headers?.host?.includes('weirdfoot')) {
 			siteVersion = 'weird-foot'
 		}
 	} catch {}

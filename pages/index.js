@@ -23,10 +23,10 @@ export async function getServerSideProps(context) {
 
 	context.res.setHeader('Cache-Control', 'public, s-maxage=6000, stale-while-revalidate=3000')
 
-	let siteVersion = 'blue-harvest'
+	let isNormalSite = true
 	try {
 		if (context?.req?.headers?.host?.includes('weirdfoot')) {
-			siteVersion = 'weird-foot'
+			isNormalSite = false
 		}
 	} catch {}
 
@@ -37,13 +37,14 @@ export async function getServerSideProps(context) {
 			reviews,
 			ctx: { url: context.req.url, resolvedUrl: context.resolvedUrl, headers: context.req.headers },
 			host: context?.req?.headers?.host,
-			version: siteVersion,
+			isNormalSite,
 		},
 	}
 }
 
-const Home = ({ appleRating, appleRatingUrl, reviews, ...rest }) => {
-	console.log('test', rest)
+const Home = ({ appleRating, appleRatingUrl, reviews, isNormalSite, ...rest }) => {
+	console.log('test', { ...rest, isNormalSite })
+
 	return (
 		<>
 			<Details>
@@ -63,7 +64,7 @@ const Home = ({ appleRating, appleRatingUrl, reviews, ...rest }) => {
 							subtitle={item.subtitle}
 							link={item.href}
 							cover={item.image}
-							icon={item.icon}
+							icon={isNormalSite ? item.icon : 'fak fa-foot'}
 							bg={item.background}
 						></LinkCard>
 					)

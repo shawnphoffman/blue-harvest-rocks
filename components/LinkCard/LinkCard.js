@@ -31,8 +31,9 @@ const LinkCard = ({ i, link, bg, icon, title, subtitle }) => {
 	}, [title])
 
 	const mod = useMemo(() => Math.floor(Math.random() * (4 - 0 + 1) + 0), [])
-	const ImgSrc = useMemo(() => {
-		if (mod === 0) return <Image src={Rac1} width="50" height="54" alt="" aria-hidden="true" />
+	// const ImgSrc = useMemo(() => {
+	const ImgSrc = () => {
+		if (mod === 0) return <Image src={Rac1} width="50" height="47" alt="" aria-hidden="true" />
 
 		if (mod === 1) return <Image src={Rac2} width="50" height="36" alt="" aria-hidden="true" />
 
@@ -41,11 +42,14 @@ const LinkCard = ({ i, link, bg, icon, title, subtitle }) => {
 		if (mod === 3) return <Image src={Mole1} width="50" height="34" alt="" aria-hidden="true" />
 
 		return <Image src={Mole2} width="50" height="37" alt="" aria-hidden="true" />
-	}, [mod])
+	}
+	// ), [mod]}
 
 	return (
 		<SuperContainer initial="hidden" animate="visible" custom={i} variants={variants}>
-			<SneakyContainer>{ImgSrc}</SneakyContainer>
+			<SneakyContainer>
+				<ImgSrc />
+			</SneakyContainer>
 			<Card whileHover={{ opacity: 1, scale: 1.05, skewY: -2 }} whileTap={{ scale: 0.9 }} onClick={logClickEvent}>
 				<a href={link} target="_blank" rel="noopener noreferrer">
 					<Cover style={{ background: bg }}>

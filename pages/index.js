@@ -23,16 +23,27 @@ export async function getServerSideProps(context) {
 
 	context.res.setHeader('Cache-Control', 'public, s-maxage=6000, stale-while-revalidate=3000')
 
+	let siteVersion = 'blue-harvest'
+	try {
+		if (context.req.headers.host !== 'blueharvest.rocks') {
+			siteVersion = 'weird-foot'
+		}
+	} catch {}
+
 	return {
 		props: {
 			appleRating: data.appleRating,
 			appleRatingUrl: data.appleRatingUrl,
 			reviews,
+			ctx: { url: context.req.url, resolvedUrl: context.resolvedUrl, headers: context.req.headers },
+			host: context?.req?.headers?.host,
+			version: siteVersion,
 		},
 	}
 }
 
-const Home = ({ appleRating, appleRatingUrl, reviews }) => {
+const Home = ({ appleRating, appleRatingUrl, reviews, ...rest }) => {
+	console.log('test', rest)
 	return (
 		<>
 			<Details>

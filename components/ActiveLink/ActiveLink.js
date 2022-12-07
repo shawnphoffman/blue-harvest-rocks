@@ -9,6 +9,7 @@ const ActiveLink = ({ children, activeClassName, ...props }) => {
 	const childClassName = child.props.className || ''
 	const [className, setClassName] = useState(childClassName)
 
+	// TODO Update this to https://github.com/vercel/next.js/blob/canary/examples/active-class-name/components/ActiveLink.tsx
 	useEffect(() => {
 		// Check if the router fields are updated client-side
 		if (isReady) {

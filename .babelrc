@@ -1,6 +1,6 @@
 {
 	"presets": [
 		"next/babel",
-		"linaria/babel"
+		"@linaria"
 	]
 }

@@ -1,6 +1,9 @@
 import { Head, Html, Main, NextScript } from 'next/document'
 import Script from 'next/script'
 
+// TODO Update to use new next font loader
+// https://beta.nextjs.org/docs/optimizing/fonts#google-fonts
+
 export default function Document() {
 	return (
 		<Html lang="en">

@@ -1,10 +1,7 @@
 import { memo } from 'react'
 import { styled } from 'linaria/react'
 
-// import { NavLink } from 'react-router-dom'
 import ActiveLink from 'components/ActiveLink/ActiveLink'
-
-// import { NavRoutes, preloadRouteComponent } from 'config/routes'
 
 const Container = styled.div`
 	display: flex;
@@ -14,7 +11,7 @@ const Container = styled.div`
 	margin-bottom: 8px;
 `
 
-const StyledLink = styled.a`
+const StyledLink = styled.div`
 	margin: 0 8px;
 	margin-bottom: 16px;
 	font-weight: bold;
@@ -31,13 +28,13 @@ const StyledLink = styled.a`
 const NavBar = () => {
 	return (
 		<Container>
-			<ActiveLink href="/" activeClassName="active" passHref>
+			<ActiveLink href="/" activeClassName="active">
 				<StyledLink>Home</StyledLink>
 			</ActiveLink>
-			<ActiveLink href="/patreon-preview" activeClassName="active" passHref>
+			<ActiveLink href="/patreon-preview" activeClassName="active">
 				<StyledLink>Patreon Preview</StyledLink>
 			</ActiveLink>
-			<ActiveLink href="/listen-now" activeClassName="active" passHref>
+			<ActiveLink href="/listen-now" activeClassName="active">
 				<StyledLink>Listen Now</StyledLink>
 			</ActiveLink>
 		</Container>

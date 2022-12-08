@@ -66,6 +66,7 @@ const Home = ({ appleRating, appleRatingUrl, reviews, isNormalSite, ...rest }) =
 							cover={item.image}
 							icon={isNormalSite ? item.icon : 'fak fa-foot'}
 							bg={item.background}
+							color={item.color}
 						></LinkCard>
 					)
 				})}

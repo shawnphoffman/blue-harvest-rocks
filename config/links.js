@@ -112,6 +112,14 @@ const items = [
 		subtitle: '@blueharvest',
 		background: '#d34eff',
 	},
+	{
+		title: 'Goodpods',
+		href: 'https://goodpods.com/podcasts/blue-harvest-a-star-wars-podcast-84967',
+		icon: 'fak fa-goodpods',
+		subtitle: '',
+		background: '#fcdb00',
+		color: 'var(--bg)',
+	},
 ]
 
 export default items

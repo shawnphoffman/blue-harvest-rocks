@@ -25,7 +25,7 @@ const variants = {
 	hidden: { opacity: 0, y: 200 },
 }
 
-const LinkCard = ({ i, link, bg, icon, title, subtitle }) => {
+const LinkCard = ({ i, link, bg, icon, title, subtitle, color = 'var(--white)' }) => {
 	const logClickEvent = useCallback(() => {
 		Panelbear.track(`LinkClick-${title.replace(/[^A-Za-z]+/g, '')}`)
 	}, [title])
@@ -48,7 +48,7 @@ const LinkCard = ({ i, link, bg, icon, title, subtitle }) => {
 			<SneakyContainer>{ImgSrc}</SneakyContainer>
 			<Card whileHover={{ opacity: 1, scale: 1.05, skewY: -2 }} whileTap={{ scale: 0.9 }} onClick={logClickEvent}>
 				<a href={link} target="_blank" rel="noopener noreferrer">
-					<Cover style={{ background: bg }}>
+					<Cover style={{ background: bg, color: color }}>
 						<i className={icon} aria-hidden="true"></i>
 					</Cover>
 					<Data>

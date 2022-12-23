@@ -32,7 +32,8 @@ const LinkCard = ({ i, link, bg, icon, title, subtitle, color = 'var(--white)' }
 
 	const ImgSrc = useMemo(() => {
 		const mod = i % 5
-		if (mod === 0) return <Image src={Rac1} width="50" height="47" alt="" aria-hidden="true" />
+
+		if (mod === 0) return <Image src={Rac1} width="50" height="53" alt="" aria-hidden="true" />
 
 		if (mod === 1) return <Image src={Rac2} width="50" height="36" alt="" aria-hidden="true" />
 

@@ -5,11 +5,14 @@
 	--link: #fff;
 	--linkAlt: #a0a8d9;
 	--orange1: #fbb33e;
-	--orange2: #b97507;
 	--white: #fff;
 	--patreon: #f96854;
 	--applePodcasts: #872ec4;
 	--yellow: rgb(237, 237, 55);
+
+	--logo1: rgb(251, 218, 70);
+	--logo2: rgb(255, 164, 7);
+	--logo3: rgba(255, 59, 0, 1);
 }
 
 * {

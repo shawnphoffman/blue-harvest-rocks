@@ -23,34 +23,24 @@ export async function getServerSideProps(context) {
 
 	context.res.setHeader('Cache-Control', 'public, s-maxage=6000, stale-while-revalidate=3000')
 
-	let isNormalSite = true
-	try {
-		if (context?.req?.headers?.host?.includes('weirdfoot')) {
-			isNormalSite = false
-		}
-	} catch {}
-
 	return {
 		props: {
 			appleRating: data.appleRating,
 			appleRatingUrl: data.appleRatingUrl,
 			reviews,
-			ctx: { url: context.req.url, resolvedUrl: context.resolvedUrl, headers: context.req.headers },
-			host: context?.req?.headers?.host,
-			isNormalSite,
 		},
 	}
 }
 
-const Home = ({ appleRating, appleRatingUrl, reviews, isNormalSite, ...rest }) => {
-	console.log('test', { ...rest, isNormalSite })
+const Home = ({ appleRating, appleRatingUrl, reviews }) => {
+	const isFootSite = process.env.NEXT_PUBLIC_FOOT === 'true'
 
 	return (
 		<>
 			<Details>
 				<Description>
 					A Star Wars podcast hosted by two long-time friends, Hawes Burkhardt and Will Whitten. Check out the Patreon for even more
-					exclusive content.
+					exclusive content or hop on Twitch to join the fun.
 				</Description>
 				<Ratings appleRating={appleRating} appleRatingUrl={appleRatingUrl} />
 			</Details>
@@ -64,7 +54,7 @@ const Home = ({ appleRating, appleRatingUrl, reviews, isNormalSite, ...rest }) =
 							subtitle={item.subtitle}
 							link={item.href}
 							cover={item.image}
-							icon={isNormalSite ? item.icon : 'fak fa-foot'}
+							icon={!isFootSite ? item.icon : 'fak fa-foot'}
 							bg={item.background}
 							color={item.color}
 						></LinkCard>

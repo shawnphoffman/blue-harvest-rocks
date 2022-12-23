@@ -4,9 +4,11 @@ import { styled } from 'linaria/react'
 import LogoSvg from 'components/logo.svg'
 
 const Header = () => {
+	// const isFootSite = process.env.NEXT_PUBLIC_FOOT === 'true'
 	return (
 		<Container>
 			<LogoSvg title="Blue Harvest" />
+			{/* {isFootSite && <>Shoe Harvest</>} */}
 		</Container>
 	)
 }

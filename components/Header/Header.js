@@ -20,7 +20,7 @@ const Container = styled.div`
 	filter: drop-shadow(1px 1px 4px #000000);
 
 	&:hover {
-		filter: drop-shadow(5px 5px 3px #a7170c);
+		filter: drop-shadow(5px 5px 3px #000000);
 	}
 
 	@media (max-width: 600px) {

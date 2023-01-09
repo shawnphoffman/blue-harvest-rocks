@@ -37,6 +37,9 @@ const NavBar = () => {
 			<ActiveLink href="/listen-now" activeClassName="active">
 				<StyledLink>Listen Now</StyledLink>
 			</ActiveLink>
+			<ActiveLink href="/discord" activeClassName="active">
+				<StyledLink>Discord Preview</StyledLink>
+			</ActiveLink>
 		</Container>
 	)
 }

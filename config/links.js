@@ -64,6 +64,13 @@ const items = [
 		background: '#19b1ff',
 	},
 	{
+		title: 'Discord',
+		href: 'https://discord.gg/CZFSuSpmD8',
+		icon: 'fa-brands fa-discord',
+		subtitle: '',
+		background: '#5865F2',
+	},
+	{
 		title: 'Google Play',
 		href: 'https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkLnBvZGJlYW4uY29tL2JsdWVoYXJ2ZXN0cG9kY2FzdC9mZWVkLnhtbA',
 		icon: 'fa-brands fa-google-play',
@@ -106,19 +113,19 @@ const items = [
 		background: '#3CC70F',
 	},
 	{
-		title: 'Hive Social',
-		href: 'https://www.hivesocial.app/',
-		icon: 'fak fa-hive-social',
-		subtitle: '@blueharvest',
-		background: '#d34eff',
-	},
-	{
 		title: 'Goodpods',
 		href: 'https://goodpods.com/podcasts/blue-harvest-a-star-wars-podcast-84967',
 		icon: 'fak fa-goodpods',
 		subtitle: '',
 		background: '#fcdb00',
 		color: 'var(--bg)',
+	},
+	{
+		title: 'Hive Social',
+		href: 'https://www.hivesocial.app/',
+		icon: 'fak fa-hive-social',
+		subtitle: '@blueharvest',
+		background: '#d34eff',
 	},
 ]
 

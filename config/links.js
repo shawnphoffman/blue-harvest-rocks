@@ -127,6 +127,14 @@ const items = [
 		subtitle: '@blueharvest',
 		background: '#d34eff',
 	},
+	{
+		title: 'OnlyFans',
+		icon: 'fak fa-onlyfans',
+		background: '#008ccf',
+		alert: () => {
+			alert(`This doesn't exist (yet) but we're watching you... ಠ_ಠ`)
+		},
+	},
 ]
 
 export default items

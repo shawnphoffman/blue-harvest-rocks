@@ -57,6 +57,7 @@ const Home = ({ appleRating, appleRatingUrl, reviews }) => {
 							icon={!isFootSite ? item.icon : 'fak fa-foot'}
 							bg={item.background}
 							color={item.color}
+							alert={item.alert}
 						></LinkCard>
 					)
 				})}

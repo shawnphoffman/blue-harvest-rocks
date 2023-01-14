@@ -25,10 +25,11 @@ const variants = {
 	hidden: { opacity: 0, y: 200 },
 }
 
-const LinkCard = ({ i, link, bg, icon, title, subtitle, color = 'var(--white)' }) => {
+const LinkCard = ({ i, link, bg, icon, title, subtitle, alert, color = 'var(--white)' }) => {
 	const logClickEvent = useCallback(() => {
+		if (alert) alert()
 		Panelbear.track(`LinkClick-${title.replace(/[^A-Za-z]+/g, '')}`)
-	}, [title])
+	}, [title, alert])
 
 	const ImgSrc = useMemo(() => {
 		const mod = i % 5

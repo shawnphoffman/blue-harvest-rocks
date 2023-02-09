@@ -6,27 +6,20 @@ import Ratings from 'components/Ratings/Ratings'
 import Reviews from 'components/Reviews/Reviews'
 import items from 'config/links'
 
-const dataUrl = 'https://gist.githubusercontent.com/shawnphoffman/c55f43ff44ab0fee42b85cf816c07ec5/raw'
+const dataUrl = 'https://api.shawn.party/api/blue-harvest/reviews'
 
 // Server data fetch
 export async function getServerSideProps(context) {
 	const res = await fetch(dataUrl)
 	const data = await res.json()
-	const { jsonUrl } = data
-
-	let reviews = []
-	if (jsonUrl) {
-		const res2 = await fetch(jsonUrl)
-		const data2 = await res2.json()
-		reviews = data2[0]?.reviews
-	}
+	const { rating, ratingsUrl, reviews } = data
 
 	context.res.setHeader('Cache-Control', 'public, s-maxage=6000, stale-while-revalidate=3000')
 
 	return {
 		props: {
-			appleRating: data.appleRating,
-			appleRatingUrl: data.appleRatingUrl,
+			appleRating: rating,
+			appleRatingUrl: ratingsUrl,
 			reviews,
 		},
 	}

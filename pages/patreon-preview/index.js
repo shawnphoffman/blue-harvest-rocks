@@ -3,18 +3,18 @@ import { styled } from 'linaria/react'
 
 import PatreonEntry from 'components/PatreonEntry/PatreonEntry'
 
-const dataUrl = 'https://gist.githubusercontent.com/shawnphoffman/79c2299232a71cfb7a2dc8768e651857/raw'
+const dataUrl = 'https://api.shawn.party/api/blue-harvest/patreon-preview'
 
 // Server data fetch
 export async function getServerSideProps(context) {
 	const res = await fetch(dataUrl)
 	const data = await res.json()
 
-	context.res.setHeader('Cache-Control', 'public, s-maxage=600, stale-while-revalidate=300')
+	context.res.setHeader('Cache-Control', 'public, s-maxage=6000, stale-while-revalidate=3000')
 
 	return {
 		props: {
-			data,
+			data: data.slice(0, 20),
 		},
 	}
 }

@@ -8,3 +8,5 @@ Official website for Blue Harvest, a Star Wars podcast hosted by Hawes Burkhardt
 
 - `yarn`
 - `yarn dev`
+
+# Sheeeeesh

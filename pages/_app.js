@@ -1,6 +1,5 @@
 import 'styles/globals.css'
 
-import { usePanelbear } from '@panelbear/panelbear-nextjs'
 import { LazyMotion } from 'framer-motion'
 import { styled } from 'linaria/react'
 import Head from 'next/head'
@@ -11,8 +10,6 @@ import NavBar from 'components/NavBar/NavBar'
 const loadMotion = () => import('config/motion.js').then(res => res.default)
 
 function App({ Component, pageProps }) {
-	usePanelbear(process.env.NEXT_PUBLIC_PANELBEAR_SITE_ID)
-
 	return (
 		<>
 			<Head>

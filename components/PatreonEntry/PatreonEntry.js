@@ -1,15 +1,9 @@
-import { memo, useCallback } from 'react'
-import * as Panelbear from '@panelbear/panelbear-js'
+import { memo } from 'react'
 import { styled } from 'linaria/react'
 
 const PatreonEntry = ({ data: d }) => {
-	const logClickEvent = useCallback(() => {
-		Panelbear.track(`PatreonClick`)
-		Panelbear.track(`P-${d.title.replace(/[^A-Za-z]+/g, '')}`)
-	}, [d.title])
-
 	return (
-		<EntryRow href={d.link} target="_blank" rel="noopener noreferrer" onClick={logClickEvent}>
+		<EntryRow href={d.link} target="_blank" rel="noopener noreferrer">
 			<Icon className="fa-brands fa-patreon" />
 			<EntryData>
 				<EntryTitle>{d.title}</EntryTitle>

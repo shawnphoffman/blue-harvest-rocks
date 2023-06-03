@@ -10,18 +10,24 @@ const dataUrl = 'https://api.shawn.party/api/blue-harvest/reviews'
 
 // Server data fetch
 export async function getServerSideProps(context) {
-	const res = await fetch(dataUrl)
-	const data = await res.json()
-	const { rating, ratingsUrl, reviews } = data
+	try {
+		const res = await fetch(dataUrl)
+		const data = await res.json()
+		const { rating, ratingsUrl, reviews } = data
 
-	context.res.setHeader('Cache-Control', 'public, s-maxage=6000, stale-while-revalidate=3000')
+		context.res.setHeader('Cache-Control', 'public, s-maxage=6000, stale-while-revalidate=3000')
 
-	return {
-		props: {
-			appleRating: rating,
-			appleRatingUrl: ratingsUrl,
-			reviews,
-		},
+		return {
+			props: {
+				appleRating: rating,
+				appleRatingUrl: ratingsUrl,
+				reviews,
+			},
+		}
+	} catch {
+		return {
+			props: {},
+		}
 	}
 }
 

@@ -77,13 +77,13 @@ const items = [
 		subtitle: '',
 		background: '#4285f4',
 	},
-	{
-		title: 'Stitcher',
-		href: 'https://www.stitcher.com/show/blue-harvest-a-star-wars-podcast',
-		icon: 'fa-solid fa-waveform',
-		subtitle: '',
-		background: '#ec8900',
-	},
+	// {
+	// 	title: 'Stitcher',
+	// 	href: 'https://www.stitcher.com/show/blue-harvest-a-star-wars-podcast',
+	// 	icon: 'fa-solid fa-waveform',
+	// 	subtitle: '',
+	// 	background: '#ec8900',
+	// },
 	{
 		title: 'PodBean',
 		href: 'https://blueharvestpodcast.podbean.com/',

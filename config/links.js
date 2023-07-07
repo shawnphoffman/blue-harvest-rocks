@@ -49,6 +49,13 @@ const items = [
 		background: '#52565e',
 	},
 	{
+		title: 'Threads',
+		href: 'https://www.threads.net/@blueharvestpod',
+		icon: 'fak fa-threads',
+		subtitle: '',
+		background: '#000',
+	},
+	{
 		title: 'Overcast',
 		// overcast://x-callback-url/add?url=https%3A%2F%2Ffeed.podbean.com%2Fblueharvestpodcast%2Ffeed.xml
 		href: 'https://overcast.fm/itunes1009917662',

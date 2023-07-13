@@ -78,6 +78,6 @@
 	overflow: hidden;
 	border-radius: 10px;
 	background: transparent;
-	border: none;
 	border-radius: 12px;
+	border: 0;
 }

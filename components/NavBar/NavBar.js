@@ -7,14 +7,17 @@ import styles from './NavBar.module.css'
 const NavBar = () => {
 	return (
 		<div className={styles.container}>
-			{/* <ActiveLink href="/" activeClassName={styles.active}>
-				<div className={styles.styledLink}>Landing</div>
-			</ActiveLink> */}
-			<ActiveLink href="/home" activeClassName={styles.active}>
+			<ActiveLink href="/" activeClassName={styles.active}>
 				<div className={styles.styledLink}>Home</div>
+			</ActiveLink>
+			<ActiveLink href="/patreon-preview" activeClassName={styles.active}>
+				<div className={styles.styledLink}>Patreon Preview</div>
 			</ActiveLink>
 			<ActiveLink href="/listen-now" activeClassName={styles.active}>
 				<div className={styles.styledLink}>Listen Now</div>
+			</ActiveLink>
+			<ActiveLink href="/discord" activeClassName={styles.active}>
+				<div className={styles.styledLink}>Discord</div>
 			</ActiveLink>
 		</div>
 	)

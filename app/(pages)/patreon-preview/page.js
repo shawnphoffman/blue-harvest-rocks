@@ -1,6 +1,6 @@
 import { memo } from 'react'
 
-import styles from '../HighPotion.module.css'
+import styles from '../Global.module.css'
 
 const ListenNow = ({}) => {
 	return (

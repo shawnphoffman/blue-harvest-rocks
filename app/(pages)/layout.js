@@ -3,16 +3,16 @@ import Image from 'next/image'
 
 import NavBar from 'components/NavBar/NavBar'
 
-import highPotionLogo from './high-potion.png'
-import styles from './HighPotion.module.css'
+import styles from './Global.module.css'
+import titleLogo from './title.png'
 
 export const metadata = {
-	title: 'High Potion',
-	description: 'A video game podcast hosted by Steve Krothe and Hawes Burkhardt',
+	title: 'Blue Harvest',
+	description: 'A Star Wars podcast hosted by Hawes Burkhardt and Will Whitten',
 	openGraph: {
-		title: 'High Potion',
-		description: 'A video game podcast hosted by Steve Krothe and Hawes Burkhardt',
-		url: 'https://myweirdfoot.com',
+		title: 'Blue Harvest: A Star Wars Podcast',
+		description: 'A Star Wars podcast hosted by Hawes Burkhardt and Will Whitten',
+		url: 'https://blueharvest.rocks/',
 		locale: 'en_US',
 		type: 'website',
 	},
@@ -23,7 +23,7 @@ const HighPotionLayout = ({ children }) => {
 		<div className={styles.wrapper}>
 			<div className={styles.page}>
 				<div className={styles.header}>
-					<Image className={styles.headerLogo} alt="High Potion" src={highPotionLogo} width={500} height={165} priority />
+					<Image className={styles.headerLogo} alt="Blue Harvest" src={titleLogo} width={500} height={188} priority />
 					<NavBar />
 				</div>
 				<div className={styles.pageDetails}>{children}</div>

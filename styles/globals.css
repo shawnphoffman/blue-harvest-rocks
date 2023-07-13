@@ -13,31 +13,43 @@
 	--logo1: rgb(251, 218, 70);
 	--logo2: rgb(255, 164, 7);
 	--logo3: rgba(255, 59, 0, 1);
+
+	--hp1: #175200;
+	--hp2: #7aeb1f;
+	--hp3: #c0f321;
+	--hp4: #fdff43;
 }
 
 * {
 	box-sizing: border-box;
-	font-family: 'Open Sans', sans-serif;
 }
-
+html {
+	background: rgb(0, 20, 0);
+	background: linear-gradient(0deg, rgb(0, 1, 30) 0%, rgb(0, 0, 0) 100%);
+}
 html body {
 	font-size: 16px;
 	padding: 0;
 	margin: 0;
 	width: 100vw;
-	font-family: 'Open Sans', sans-serif;
 	box-sizing: border-box;
-	color: var(--text);
-	background: var(--bg);
+	color: white;
+	overflow: hidden;
+	height: 100vh;
 }
 
-#__next {
+.scroller {
 	width: 100%;
 	height: 100%;
-	max-width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
 	padding: 0px 16px 0px 16px;
+	overflow: scroll;
+
+	/*  */
+	background: transparent url('/Raccoon Transparent.png') center top/contain no-repeat;
+	background-attachment: fixed;
+	background-size: 700px;
 }
 
 a {

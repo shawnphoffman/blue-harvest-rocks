@@ -1,4 +1,4 @@
-import { memo, useMemo } from 'react'
+import { memo, useCallback, useMemo } from 'react'
 import { m } from 'framer-motion'
 import { styled } from 'linaria/react'
 import Image from 'next/image'
@@ -25,6 +25,10 @@ const variants = {
 }
 
 const LinkCard = ({ i, link, bg, icon, title, subtitle, alert, color = 'var(--white)' }) => {
+	const handleClick = useCallback(() => {
+		if (alert) alert()
+	}, [alert])
+
 	const ImgSrc = useMemo(() => {
 		const mod = i % 5
 
@@ -42,7 +46,7 @@ const LinkCard = ({ i, link, bg, icon, title, subtitle, alert, color = 'var(--wh
 	return (
 		<SuperContainer initial="hidden" animate="visible" custom={i} variants={variants}>
 			<SneakyContainer>{ImgSrc}</SneakyContainer>
-			<Card whileHover={{ opacity: 1, scale: 1.05, skewY: -2 }} whileTap={{ scale: 0.9 }}>
+			<Card whileHover={{ opacity: 1, scale: 1.05, skewY: -2 }} whileTap={{ scale: 0.9 }} onClick={handleClick}>
 				<a href={link} target="_blank" rel="noopener noreferrer">
 					<Cover style={{ background: bg, color: color }}>
 						<i className={icon} aria-hidden="true"></i>

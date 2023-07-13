@@ -5,14 +5,14 @@ import Ratings from 'components/Ratings/Ratings'
 import Reviews from 'components/Reviews/Reviews'
 import items from 'config/links'
 
-import styles from './HighPotion.module.css'
+import styles from './Global.module.css'
 
 const HighPotionHome = ({}) => {
 	return (
 		<>
 			<div className={styles.pageDescription}>
-				A podcast where hosts Steve Krothe and Hawes Burkhardt talk about video games. Yes, another video game podcast hosted by two dudes.
-				Check us out though, it&apos;s a lot of fun!
+				A Star Wars podcast hosted by two long-time friends, Hawes Burkhardt and Will Whitten. Check out the Patreon for even more exclusive
+				content or hop on Twitch to join the fun.
 			</div>
 			<Ratings />
 			<div className={styles.pageRow}>

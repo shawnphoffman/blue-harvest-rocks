@@ -1,9 +1,9 @@
-import { memo, useMemo } from 'react'
+import { memo } from 'react'
 
 import styles from './Reviews.module.css'
 import Stars from './Stars'
 
-const dataUrl = 'https://api.shawn.party/api/high-potion/reviews'
+const dataUrl = 'https://api.shawn.party/api/blue-harvest/reviews'
 
 async function getData() {
 	try {

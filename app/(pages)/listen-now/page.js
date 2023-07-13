@@ -1,21 +1,12 @@
 import { memo } from 'react'
 
-import styles from '../HighPotion.module.css'
+import styles from '../Global.module.css'
 
 const ListenNow = ({}) => {
 	return (
 		<div className={styles.pageDescription}>
 			<iframe
 				className={styles.iframe}
-				// src="https://open.spotify.com/embed/show/3Di7qFLy6FoNg6zcBGaOnK"
-				// width="100%"
-				// height="352"
-				// frameborder="0"
-				// allowfullscreen=""
-				// allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-				// sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
-				// loading="lazy"
-
 				loading="lazy"
 				title="Blue Harvest Podcast Preview"
 				src="https://embed.podcasts.apple.com/us/podcast/blue-harvest-a-star-wars-podcast/id1009917662?itsct=podcast_box_player&amp;itscg=30200&amp;ls=1&amp;theme=auto"

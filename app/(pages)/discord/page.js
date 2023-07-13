@@ -1,13 +1,22 @@
 import { memo } from 'react'
 
-import styles from '../HighPotion.module.css'
+import styles from '../Global.module.css'
 
-const ListenNow = ({}) => {
+const Discord = ({}) => {
 	return (
 		<div className={styles.pageDescription}>
-			<h1>Discord</h1>
+			<iframe
+				loading="lazy"
+				title="Blue Harvest Discord"
+				src="https://discord.com/widget?id=471428649200123915&theme=dark"
+				width="350"
+				height="500"
+				allowtransparency="true"
+				frameborder="0"
+				sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+			></iframe>
 		</div>
 	)
 }
 
-export default memo(ListenNow)
+export default memo(Discord)

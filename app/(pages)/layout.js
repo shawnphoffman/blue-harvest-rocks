@@ -6,19 +6,7 @@ import NavBar from 'components/NavBar/NavBar'
 import styles from './Global.module.css'
 import titleLogo from './title.png'
 
-export const metadata = {
-	title: 'Blue Harvest',
-	description: 'A Star Wars podcast hosted by Hawes Burkhardt and Will Whitten',
-	openGraph: {
-		title: 'Blue Harvest: A Star Wars Podcast',
-		description: 'A Star Wars podcast hosted by Hawes Burkhardt and Will Whitten',
-		url: 'https://blueharvest.rocks/',
-		locale: 'en_US',
-		type: 'website',
-	},
-}
-
-const HighPotionLayout = ({ children }) => {
+const PageLayout = ({ children }) => {
 	return (
 		<div className={styles.wrapper}>
 			<div className={styles.page}>
@@ -32,4 +20,4 @@ const HighPotionLayout = ({ children }) => {
 	)
 }
 
-export default memo(HighPotionLayout)
+export default memo(PageLayout)

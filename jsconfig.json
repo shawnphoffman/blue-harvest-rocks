@@ -4,13 +4,13 @@
 		"baseUrl": "."
 	},
 	"include": [
-		"pages",
+		"app",
 		"styles",
 		"utils",
-		"components",
+		"old-components",
 		"hooks",
 		"context",
-		"public"
+		"public",
 	],
 	"exclude": [
 		"node_modules/**/*",

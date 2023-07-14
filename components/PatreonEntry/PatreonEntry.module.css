@@ -22,7 +22,7 @@
 .entryRow {
 	display: flex;
 	flex-direction: row;
-	padding: 16px;
+	padding: 8px;
 	border: 1px solid var(--bh1);
 	justify-content: space-between;
 	align-items: center;

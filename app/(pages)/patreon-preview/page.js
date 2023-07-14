@@ -12,7 +12,7 @@ async function getData() {
 		const data = await res.json()
 
 		return {
-			data: data.slice(0, 10),
+			data: data.slice(0, 15),
 		}
 	} catch {
 		return {}

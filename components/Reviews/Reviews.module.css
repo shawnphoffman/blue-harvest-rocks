@@ -32,7 +32,7 @@
 	margin-left: 16px;
 	margin-right: 16px;
 	font-style: italic;
-	color: var(--hp3);
+	color: var(--bh4);
 }
 @media (max-width: 600px) {
 	.author {
@@ -50,7 +50,7 @@
 
 .title {
 	font-weight: bold;
-	color: var(--hp2);
+	color: var(--bh3);
 }
 
 .text {
@@ -60,7 +60,7 @@
 }
 
 .starContainer {
-	color: var(--hp4);
+	color: var(--yellow);
 	display: flex;
 	flex-wrap: nowrap;
 }

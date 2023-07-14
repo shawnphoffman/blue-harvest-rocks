@@ -1,12 +1,14 @@
 import { memo } from 'react'
 
+import PatreonEntry from 'components/PatreonEntry/PatreonEntry'
+
 import styles from '../Global.module.css'
 
 const dataUrl = 'https://api.shawn.party/api/blue-harvest/patreon-preview'
 
 async function getData() {
 	try {
-		const res = await fetch(dataUrl, { next: { revalidate: 60 * 60 } })
+		const res = await fetch(dataUrl, { next: { revalidate: 60 * 60 * 12 } })
 		const data = await res.json()
 
 		return {
@@ -18,15 +20,19 @@ async function getData() {
 }
 
 const PatreonPreview = async () => {
-	const data = await getData()
-	console.log(data)
+	const { data } = await getData()
 	return (
-		<div className={styles.pageDescription}>
-			<h1>Patreon Preview</h1>
-			<pre>
-				<code>{JSON.stringify(data, null, 2)}</code>
-			</pre>
-		</div>
+		<>
+			<div className={styles.pageDescription}>
+				Here is a preview of some of the most recent amazing Blue Harvest Patreon content. <strong>This</strong> is the content you&apos;re
+				looking for.
+			</div>
+			<div className={styles.patreonWrapper}>
+				{data.map(d => (
+					<PatreonEntry key={d.guid} data={d} />
+				))}
+			</div>
+		</>
 	)
 }
 

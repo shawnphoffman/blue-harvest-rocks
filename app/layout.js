@@ -6,13 +6,13 @@ import Script from 'next/script'
 const openSans = Open_Sans({ subsets: ['latin'] })
 
 export const metadata = {
-	title: 'My Weird Foot',
-	description: 'Landing page for Blue Harvest and High Potion podcasts',
-	metadataBase: new URL('https://myweirdfoot.com'),
+	title: 'Blue Harvest',
+	description: 'A Star Wars podcast hosted by Hawes Burkhardt and Will Whitten',
+	metadataBase: 'https://blueharvest.rocks/',
 	openGraph: {
-		title: 'My Weird Foot',
-		description: 'Landing page for Blue Harvest and High Potion podcasts',
-		url: 'https://myweirdfoot.com',
+		title: 'Blue Harvest: A Star Wars Podcast',
+		description: 'A Star Wars podcast hosted by Hawes Burkhardt and Will Whitten',
+		url: 'https://blueharvest.rocks/',
 		locale: 'en_US',
 		type: 'website',
 	},

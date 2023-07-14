@@ -1,0 +1,32 @@
+.entryDate {
+	color: var(--linkAlt);
+	font-size: 12px;
+}
+
+.entryTitle {
+	font-size: 18px;
+	font-weight: bold;
+	margin: 0 16px 8px 16px;
+}
+
+.entryData {
+	flex: 1;
+}
+
+.icon {
+	flex: 0;
+	font-size: 24px;
+	color: var(--patreon);
+}
+
+.entryRow {
+	display: flex;
+	flex-direction: row;
+	padding: 16px;
+	border: 1px solid var(--outline);
+	justify-content: space-between;
+	align-items: center;
+}
+.entryRow:hover {
+	background: var(--bhOutline);
+}

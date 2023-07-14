@@ -6,7 +6,7 @@ const dataUrl = 'https://api.shawn.party/api/blue-harvest/reviews'
 
 async function getData() {
 	try {
-		const res = await fetch(dataUrl, { next: { revalidate: 60 * 60 } })
+		const res = await fetch(dataUrl, { next: { revalidate: 60 * 60 * 12 } })
 		const data = await res.json()
 		const { rating, ratingsUrl } = data
 

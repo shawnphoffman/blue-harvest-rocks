@@ -7,7 +7,7 @@ import items from 'config/links'
 
 import styles from './Global.module.css'
 
-const HighPotionHome = ({}) => {
+const Home = ({}) => {
 	return (
 		<>
 			<div className={styles.pageDescription}>
@@ -40,4 +40,4 @@ const HighPotionHome = ({}) => {
 	)
 }
 
-export default memo(HighPotionHome)
+export default memo(Home)

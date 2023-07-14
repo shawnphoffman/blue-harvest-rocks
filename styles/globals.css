@@ -40,9 +40,8 @@ html body {
 	margin-right: auto;
 	padding: 0px 16px 0px 16px;
 	overflow: scroll;
-
 	/*  */
-	background: transparent url('/Raccoon Transparent.png') center top/contain no-repeat;
+	background: transparent url('/raccoon.png') center top/contain no-repeat;
 	background-attachment: fixed;
 	background-size: 700px;
 }

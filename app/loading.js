@@ -1,4 +1,3 @@
 export default function Loading() {
-	// Or a custom loading skeleton component
-	return <p>Loading...</p>
+	return <div className="fa-solid fa-space-station-moon-construction fa-beat-fade" />
 }

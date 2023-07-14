@@ -7,7 +7,7 @@
 		"app",
 		"styles",
 		"utils",
-		"old-components",
+		"components",
 		"hooks",
 		"context",
 		"public",

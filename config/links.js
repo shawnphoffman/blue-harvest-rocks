@@ -3,7 +3,7 @@ const items = [
 		title: 'Twitter',
 		href: 'https://twitter.com/BlueHarvestPod',
 		icon: 'fa-brands fa-twitter',
-		background: '#1da1f2',
+		background: '#0d7ac4',
 	},
 	{
 		title: 'Patreon',
@@ -21,7 +21,7 @@ const items = [
 		title: 'Spotify',
 		href: 'https://open.spotify.com/show/3Krn2ePCbILvzORISjh2PT',
 		icon: 'fa-brands fa-spotify',
-		background: '#1db954',
+		background: '#16883e',
 	},
 	{
 		title: 'Twitch',
@@ -38,27 +38,27 @@ const items = [
 	{
 		title: 'Voicemails & Emails',
 		href: 'mailto:blueharvestpodcast@gmail.com',
-		icon: 'fa-solid fa-mailbox',
+		icon: 'fa-solid fa-mailbox-flag-up',
 		background: '#52565e',
 	},
 	{
 		title: 'Threads',
 		href: 'https://www.threads.net/@blueharvestpod',
 		icon: 'fak fa-threads',
-		background: '#000',
+		background: '#222',
 	},
 	{
 		title: 'Overcast',
 		// overcast://x-callback-url/add?url=https%3A%2F%2Ffeed.podbean.com%2Fblueharvestpodcast%2Ffeed.xml
 		href: 'https://overcast.fm/itunes1009917662',
 		icon: 'fak fa-overcast fa-lg',
-		background: '#fc7e0f',
+		background: '#be5a01',
 	},
 	{
 		title: 'Merch Store',
 		href: 'https://www.teepublic.com/user/blueharvestpodcast',
 		icon: 'fa-solid fa-shirt',
-		background: '#19b1ff',
+		background: '#374ECD',
 	},
 	{
 		title: 'Discord',
@@ -70,7 +70,7 @@ const items = [
 		title: 'Google Play',
 		href: 'https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkLnBvZGJlYW4uY29tL2JsdWVoYXJ2ZXN0cG9kY2FzdC9mZWVkLnhtbA',
 		icon: 'fa-brands fa-google-play',
-		background: '#4285f4',
+		background: '#206ff2',
 	},
 	// {
 	// 	title: 'Stitcher',
@@ -82,25 +82,25 @@ const items = [
 		title: 'PodBean',
 		href: 'https://blueharvestpodcast.podbean.com/',
 		icon: 'fa-solid fa-coffee-beans',
-		background: '#8fc31f',
+		background: 'hsl(79 65% 30% / 1)',
 	},
 	{
 		title: 'YouTube',
 		href: 'https://www.youtube.com/BlueHarvestAStarWarsPodcast',
 		icon: 'fa-brands fa-youtube',
-		background: '#ff0000',
+		background: 'rgb(238 0 0)',
 	},
 	{
 		title: 'RSS',
 		href: 'https://feed.podbean.com/blueharvestpodcast/feed.xml',
 		icon: 'fa-solid fa-rss',
-		background: '#0000ff',
+		background: '#ce4a0c',
 	},
 	{
 		title: 'Stoned Cobra',
 		href: 'https://stonedcobra.bandcamp.com/',
 		icon: 'fa-solid fa-snake',
-		background: '#3CC70F',
+		background: 'hsl(105 78% 30% / 1)',
 	},
 	{
 		title: 'Goodpods',
@@ -114,7 +114,7 @@ const items = [
 		href: 'https://www.hivesocial.app/',
 		icon: 'fak fa-hive-social',
 		subtitle: '@blueharvest',
-		background: '#d34eff',
+		background: 'hsl(285 100% 50% / 1)',
 	},
 	// {
 	// 	title: 'OnlyFans',

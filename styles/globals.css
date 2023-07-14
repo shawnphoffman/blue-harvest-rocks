@@ -1,12 +1,8 @@
 :root {
 	--bg: #111;
-	--outline: #1d1f26;
 	--text: #fff;
-	--link: #fff;
-	--linkAlt: #a0a8d9;
-	--orange1: #fbb33e;
 	--white: #fff;
-	--patreon: #f96854;
+	--patreon: rgb(217 59 38);
 	--applePodcasts: #872ec4;
 	--yellow: rgb(237, 237, 55);
 

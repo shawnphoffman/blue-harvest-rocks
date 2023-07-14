@@ -48,7 +48,7 @@ const Reviews = async () => {
 				<div className={styles.container} key={r.title}>
 					<div className={styles.header}>
 						<div className={styles.byline}>
-							<div className={styles.title}>&quot;{r.title}&quot;</div>
+							<div className={styles.title}>{`"${r.title}"`}</div>
 							<div className={styles.author}>{r.author}</div>
 						</div>
 						<Stars count={r.stars} />

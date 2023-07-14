@@ -12,7 +12,7 @@ async function getData() {
 		const data = await res.json()
 
 		return {
-			data: data.slice(0, 20),
+			data: data.slice(0, 10),
 		}
 	} catch {
 		return {}
@@ -24,8 +24,8 @@ const PatreonPreview = async () => {
 	return (
 		<>
 			<div className={styles.pageDescription}>
-				Here is a preview of some of the most recent amazing Blue Harvest Patreon content. <strong>This</strong> is the content you&apos;re
-				looking for.
+				Here is a preview of the 10 most recent episodes released on the Blue Harvest Patreon. <strong>This</strong> is the content
+				you&apos;re looking for.
 			</div>
 			<div className={styles.patreonWrapper}>
 				{data.map(d => (

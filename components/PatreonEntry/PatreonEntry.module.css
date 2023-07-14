@@ -23,10 +23,11 @@
 	display: flex;
 	flex-direction: row;
 	padding: 16px;
-	border: 1px solid var(--outline);
+	border: 1px solid var(--bh1);
 	justify-content: space-between;
 	align-items: center;
+	background: var(--bhBg);
 }
 .entryRow:hover {
-	background: var(--bhOutline);
+	background: var(--bhHover);
 }

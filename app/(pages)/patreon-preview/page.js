@@ -6,11 +6,11 @@ import styles from '../Global.module.css'
 
 const dataUrl = 'https://api.shawn.party/api/blue-harvest/patreon-preview'
 
-export const revalidate = 60 * 60 * 6
+export const revalidate = 60 * 60 * 3
 
 async function getData() {
 	try {
-		const res = await fetch(dataUrl, { next: { revalidate: 60 * 60 * 12 } })
+		const res = await fetch(dataUrl, { next: { revalidate: 60 * 60 * 3 } })
 		const data = await res.json()
 
 		return {
@@ -26,8 +26,8 @@ const PatreonPreview = async () => {
 	return (
 		<>
 			<div className={styles.pageDescription}>
-				Here is a preview of the 10 most recent episodes released on the Blue Harvest Patreon. <strong>This</strong> is the content
-				you&apos;re looking for.
+				Here is a preview of the most recent episodes released on the Blue Harvest Patreon. <strong>This</strong> is the content you&apos;re
+				looking for.
 			</div>
 			<div className={styles.patreonWrapper}>
 				{data.map(d => (

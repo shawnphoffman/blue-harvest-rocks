@@ -11,7 +11,7 @@ const PageLayout = ({ children }) => {
 		<div className={styles.wrapper}>
 			<div className={styles.page}>
 				<div className={styles.header}>
-					<Image className={styles.headerLogo} alt="Blue Harvest" src={titleLogo} width={500} height={188} priority />
+					<Image className={styles.headerLogo} alt="Blue Harvest" src={titleLogo} width={500} height={188} placeholder="blur" priority />
 					<NavBar />
 				</div>
 				<div className={styles.pageDetails}>{children}</div>

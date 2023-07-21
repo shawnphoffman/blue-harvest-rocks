@@ -20,6 +20,8 @@
 }
 html {
 	background: black;
+	/* background: rgb(0, 20, 0); */
+	background: linear-gradient(0deg, rgb(0, 1, 30) 0%, rgb(0, 0, 0) 100%);
 }
 html body {
 	font-size: 16px;
@@ -27,8 +29,6 @@ html body {
 	margin: 0;
 	width: 100vw;
 	color: white;
-	background: rgb(0, 20, 0);
-	background: linear-gradient(0deg, rgb(0, 1, 30) 0%, rgb(0, 0, 0) 100%);
 }
 
 .scroller {
@@ -38,9 +38,17 @@ html body {
 	margin-right: auto;
 	padding: 0px 16px 0px 16px;
 	/*  */
-	background: transparent url('/raccoon.png') center top/contain no-repeat;
+	/* background: transparent url('/raccoon.png') center top/contain no-repeat; */
+	/* background-image: url(/raccoon.png); */
+	/* background-position-x: center;
+	background-position-y: top;
+	background-repeat-x: no-repeat;
+	background-repeat-y: no-repeat;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: transparent;
 	background-attachment: fixed;
-	background-size: 700px;
+	background-size: 700px; */
 }
 
 a {

@@ -4,6 +4,10 @@ import { Analytics } from '@vercel/analytics/react'
 import { Open_Sans } from 'next/font/google'
 import Script from 'next/script'
 
+import Background from 'components/Background'
+
+// import bg from './raccoon-trans.png'
+
 const openSans = Open_Sans({ subsets: ['latin'] })
 
 export const metadata = {
@@ -27,6 +31,8 @@ export default function RootLayout({ children }) {
 				<Script src="https://kit.fontawesome.com/d7ccc5bb1a.js" strategy="afterInteractive" rel="preload" as="font" />
 			</head>
 			<body>
+				<Background />
+				{/* <div className="scroller" style={{ backgroundImage: `url(${bg.src})` }}> */}
 				<div className="scroller">{children}</div>
 				<Analytics />
 			</body>

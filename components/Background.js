@@ -16,6 +16,7 @@ const Background = () => {
 				style={{
 					objectFit: 'cover',
 				}}
+				priority
 			/>
 		</div>
 	)

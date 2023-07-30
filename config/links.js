@@ -42,6 +42,12 @@ const items = [
 		background: '#52565e',
 	},
 	{
+		title: 'Bluesky',
+		href: 'https://bsky.app/profile/blueharvest.bsky.social',
+		icon: 'fa-solid fa-clouds',
+		background: '#0560ff',
+	},
+	{
 		title: 'Threads',
 		href: 'https://www.threads.net/@blueharvestpod',
 		icon: 'fak fa-threads',

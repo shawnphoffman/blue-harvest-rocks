@@ -1,9 +1,9 @@
 import { memo } from 'react'
 import Image from 'next/image'
 
+import styles from 'app/Global.module.css'
 import NavBar from 'components/NavBar/NavBar'
 
-import styles from './Global.module.css'
 import titleLogo from './title.png'
 
 const PageLayout = ({ children }) => {

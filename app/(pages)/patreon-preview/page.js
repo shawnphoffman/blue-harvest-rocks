@@ -1,8 +1,7 @@
 import { memo } from 'react'
 
+import styles from 'app/Global.module.css'
 import PatreonEntry from 'components/PatreonEntry/PatreonEntry'
-
-import styles from '../Global.module.css'
 
 const dataUrl = 'https://api.shawn.party/api/blue-harvest/patreon-preview'
 

@@ -1,6 +1,6 @@
 import { memo } from 'react'
 
-import styles from '../Global.module.css'
+import styles from 'app/Global.module.css'
 
 const ListenNow = ({}) => {
 	return (

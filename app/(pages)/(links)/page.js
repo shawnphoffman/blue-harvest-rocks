@@ -1,10 +1,9 @@
+import styles from 'app/Global.module.css'
 import LinkCard from 'components/LinkCard/LinkCard'
 import Ratings from 'components/Ratings/Ratings'
 import Reviews from 'components/Reviews/Reviews'
 
 import items from './links'
-
-import styles from './Global.module.css'
 
 export default async function Home() {
 	return (

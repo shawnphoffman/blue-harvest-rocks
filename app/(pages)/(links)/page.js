@@ -1,13 +1,12 @@
-import { memo } from 'react'
-
 import LinkCard from 'components/LinkCard/LinkCard'
 import Ratings from 'components/Ratings/Ratings'
 import Reviews from 'components/Reviews/Reviews'
-import items from 'config/links'
+
+import items from './links'
 
 import styles from './Global.module.css'
 
-const Home = ({}) => {
+export default async function Home() {
 	return (
 		<>
 			<div className={styles.pageDescription}>
@@ -39,5 +38,3 @@ const Home = ({}) => {
 		</>
 	)
 }
-
-export default memo(Home)

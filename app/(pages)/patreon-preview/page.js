@@ -6,8 +6,6 @@ import styles from '../Global.module.css'
 
 const dataUrl = 'https://api.shawn.party/api/blue-harvest/patreon-preview'
 
-export const runtime = 'edge'
-
 export const revalidate = 60 * 60 * 3
 
 async function getData() {

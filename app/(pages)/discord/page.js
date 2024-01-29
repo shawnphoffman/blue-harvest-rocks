@@ -2,8 +2,6 @@ import { memo } from 'react'
 
 import styles from '../Global.module.css'
 
-export const runtime = 'edge'
-
 const Discord = ({}) => {
 	return (
 		<div className={styles.pageDescription}>

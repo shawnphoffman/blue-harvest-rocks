@@ -1,3 +1,7 @@
+export const appleUrl =
+	'https://podcasts.apple.com/us/podcast/blue-harvest-a-star-wars-podcast/id1009917662?itsct=podcast_box&itscg=30200&ls=1'
+export const spotifyUrl = 'https://open.spotify.com/show/3Krn2ePCbILvzORISjh2PT'
+
 const items = [
 	{
 		title: 'Twitter',
@@ -13,13 +17,13 @@ const items = [
 	},
 	{
 		title: 'Apple Podcasts',
-		href: 'https://podcasts.apple.com/us/podcast/blue-harvest-a-star-wars-podcast/id1009917662?itsct=podcast_box&itscg=30200&ls=1',
+		href: appleUrl,
 		icon: 'fa-solid fa-podcast',
 		background: 'var(--applePodcasts)',
 	},
 	{
 		title: 'Spotify',
-		href: 'https://open.spotify.com/show/3Krn2ePCbILvzORISjh2PT',
+		href: spotifyUrl,
 		icon: 'fa-brands fa-spotify',
 		background: '#16883e',
 	},

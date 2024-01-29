@@ -3,7 +3,7 @@ import { Suspense } from 'react'
 import LinkCard from 'components/LinkCard'
 import RatingsApple from 'components/RatingsApple'
 import RatingsSpotify from 'components/RatingsSpotify'
-import Reviews from 'components/Reviews/Reviews'
+import Reviews from 'components/Reviews'
 
 import items from './links'
 
@@ -36,7 +36,9 @@ export default async function Home() {
 			</div>
 
 			<div className={'pageRow'}>
-				<Reviews />
+				<Suspense>
+					<Reviews />
+				</Suspense>
 			</div>
 		</>
 	)

@@ -58,9 +58,3 @@
 	line-height: 1.5;
 	padding: 8px;
 }
-
-.starContainer {
-	color: var(--yellow);
-	display: flex;
-	flex-wrap: nowrap;
-}

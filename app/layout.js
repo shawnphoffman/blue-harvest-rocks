@@ -38,7 +38,6 @@ export default function RootLayout({ children }) {
 						<div className={'page'}>
 							<div className={'header'}>
 								<Image className={'headerLogo'} alt="Blue Harvest" src={titleLogo} width={500} priority />
-
 								<div className="navContainer">
 									<ActiveLink href="/" label="Links" />
 									<ActiveLink href="/patreon-preview" label="Patreon Preview" />

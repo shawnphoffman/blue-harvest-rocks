@@ -38,7 +38,7 @@ const items = [
 	{
 		title: 'Voicemails & Emails',
 		href: 'mailto:blueharvestpodcast@gmail.com',
-		icon: 'fa-solid fa-mailbox-flag-up',
+		icon: 'fa-solid fa-at',
 		background: '#52565e',
 	},
 	{
@@ -99,7 +99,7 @@ const items = [
 	{
 		title: 'RSS',
 		href: 'https://feed.podbean.com/blueharvestpodcast/feed.xml',
-		icon: 'fa-solid fa-rss',
+		icon: 'fa-solid fa-square-rss',
 		background: '#ce4a0c',
 	},
 	{
@@ -115,13 +115,13 @@ const items = [
 		background: '#fcdb00',
 		color: 'var(--bg)',
 	},
-	{
-		title: 'Hive Social',
-		href: 'https://www.hivesocial.app/',
-		icon: 'fak fa-hive-social',
-		subtitle: '@blueharvest',
-		background: 'hsl(285 100% 50% / 1)',
-	},
+	// {
+	// 	title: 'Hive Social',
+	// 	href: 'https://www.hivesocial.app/',
+	// 	icon: 'fak fa-hive-social',
+	// 	subtitle: '@blueharvest',
+	// 	background: 'hsl(285 100% 50% / 1)',
+	// },
 	// {
 	// 	title: 'OnlyFans',
 	// 	icon: 'fak fa-onlyfans',

@@ -1,6 +1,8 @@
-import styles from 'app/Global.module.css'
-import LinkCard from 'components/LinkCard/LinkCard'
-import Ratings from 'components/Ratings/Ratings'
+import { Suspense } from 'react'
+
+import LinkCard from 'components/LinkCard'
+import RatingsApple from 'components/RatingsApple'
+import RatingsSpotify from 'components/RatingsSpotify'
 import Reviews from 'components/Reviews/Reviews'
 
 import items from './links'
@@ -8,22 +10,24 @@ import items from './links'
 export default async function Home() {
 	return (
 		<>
-			<div className={styles.pageDescription}>
+			<div className={'pageDescription'}>
 				A Star Wars podcast hosted by two long-time friends, Hawes Burkhardt and Will Whitten. Check out the Patreon for even more exclusive
 				content or hop on Twitch to join the fun.
 			</div>
-			<Ratings />
-			<div className={styles.pageRow}>
+			<div className="ratingsWrapper">
+				<Suspense>
+					<RatingsApple />
+					<RatingsSpotify />
+				</Suspense>
+			</div>
+			<div className={'pageRow'}>
 				{items.map((item, i) => {
 					return (
 						<LinkCard
-							i={i}
 							key={item.title}
 							title={item.title}
-							subtitle={item.subtitle}
 							link={item.href}
 							icon={item.icon}
-							cover={item.image}
 							bg={item.background}
 							color={item.color}
 						></LinkCard>
@@ -31,7 +35,7 @@ export default async function Home() {
 				})}
 			</div>
 
-			<div className={styles.pageRow}>
+			<div className={'pageRow'}>
 				<Reviews />
 			</div>
 		</>

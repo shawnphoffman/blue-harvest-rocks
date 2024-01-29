@@ -1,34 +1,18 @@
-import { memo } from 'react'
-
-import styles from 'app/Global.module.css'
+import { getPatreonPreview } from 'app/actions'
 import PatreonEntry from 'components/PatreonEntry/PatreonEntry'
 
-const dataUrl = 'https://api.shawn.party/api/blue-harvest/patreon-preview'
+export const revalidate = 60 * 60 // 1 hour
+export const dynamic = 'force-dynamic'
 
-export const revalidate = 60 * 60 * 3
-
-async function getData() {
-	try {
-		const res = await fetch(dataUrl, { next: { revalidate } })
-		const data = await res.json()
-
-		return {
-			data: data.slice(0, 15),
-		}
-	} catch {
-		return {}
-	}
-}
-
-const PatreonPreview = async () => {
-	const { data } = await getData()
+export default async function PatreonPreview() {
+	const { data } = await getPatreonPreview()
 	return (
 		<>
-			<div className={styles.pageDescription}>
+			<div className={'pageDescription'}>
 				Here is a preview of the most recent episodes released on the Blue Harvest Patreon. <strong>This</strong> is the content you&apos;re
 				looking for.
 			</div>
-			<div className={styles.patreonWrapper}>
+			<div className={'patreonWrapper'}>
 				{data.map(d => (
 					<PatreonEntry key={d.guid} data={d} />
 				))}
@@ -36,5 +20,3 @@ const PatreonPreview = async () => {
 		</>
 	)
 }
-
-export default memo(PatreonPreview)

@@ -1,10 +1,8 @@
-import { memo } from 'react'
+'use client'
 
-import styles from 'app/Global.module.css'
-
-const Discord = ({}) => {
+export default function Discord() {
 	return (
-		<div className={styles.pageDescription}>
+		<div className={'pageDescription'}>
 			<iframe
 				loading="lazy"
 				title="Blue Harvest Discord"
@@ -18,5 +16,3 @@ const Discord = ({}) => {
 		</div>
 	)
 }
-
-export default memo(Discord)

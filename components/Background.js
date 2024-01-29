@@ -1,13 +1,12 @@
-import { memo } from 'react'
+import './Background.css'
+
 import Image from 'next/image'
 
 import bg from 'app/raccoon-trans.png'
 
-import styles from './Background.module.css'
-
-const Background = () => {
+export default function Background() {
 	return (
-		<div className={styles.bgWrap}>
+		<div className={'background-wrap'}>
 			<Image
 				alt="Samurai Raccoon"
 				src={bg}
@@ -21,5 +20,3 @@ const Background = () => {
 		</div>
 	)
 }
-
-export default memo(Background)

@@ -29,7 +29,7 @@ const items = [
 	},
 	{
 		title: 'Twitch',
-		href: 'http://www.twitch.tv/blueharvestpod',
+		href: 'https://www.twitch.tv/blueharvestpod',
 		icon: 'fa-brands fa-twitch',
 		background: '#9146ff',
 	},

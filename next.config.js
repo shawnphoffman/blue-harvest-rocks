@@ -10,6 +10,12 @@ module.exports = {
 				permanent: false,
 				basePath: false,
 			},
+			{
+				source: '/twitch',
+				destination: 'https://www.twitch.tv/blueharvestpod',
+				permanent: false,
+				basePath: false,
+			},
 		]
 	},
 }

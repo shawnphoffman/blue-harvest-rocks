@@ -1,6 +1,9 @@
-export const appleUrl =
-	'https://podcasts.apple.com/us/podcast/blue-harvest-a-star-wars-podcast/id1009917662?itsct=podcast_box&itscg=30200&ls=1'
-export const spotifyUrl = 'https://open.spotify.com/show/3Krn2ePCbILvzORISjh2PT'
+export const spotifyId = '3Krn2ePCbILvzORISjh2PT'
+export const spotifyUrl = `https://open.spotify.com/show/${spotifyId}`
+export const applePodcastId = '1009917662'
+export const applePodcastUrl = `https://podcasts.apple.com/us/podcast/id${applePodcastId}`
+export const appleRatingUrl = `${applePodcastUrl}?see-all=reviews`
+export const rssFeedUrl = 'https://feed.podbean.com/scruffypodcasters/feed.xml'
 
 const items = [
 	{
@@ -17,7 +20,7 @@ const items = [
 	},
 	{
 		title: 'Apple Podcasts',
-		href: appleUrl,
+		href: applePodcastUrl,
 		icon: 'fa-solid fa-podcast',
 		background: 'var(--applePodcasts)',
 	},

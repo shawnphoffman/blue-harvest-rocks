@@ -2,9 +2,13 @@
 
 import { XMLParser } from 'fast-xml-parser'
 
+import { appleRatingUrl, rssFeedUrl, spotifyUrl } from './(pages)/(links)/links'
+
 export async function getReviews() {
 	try {
-		const res = await fetch('https://api.shawn.party/api/blue-harvest/reviews', { next: { revalidate: 60 * 60 * 1 } })
+		const res = await fetch(`https://api.shawn.party/api/pod-data/apple?url=${appleRatingUrl}`, {
+			next: { revalidate: 60 * 60 * 1 },
+		})
 		const data = await res.json()
 		const { rating, ratingsUrl, reviews } = data
 
@@ -20,7 +24,7 @@ export async function getReviews() {
 
 export async function getSpotifyReviews() {
 	try {
-		const res = await fetch(`https://api.shawn.party/api/pod-data/spotify?url=${'https://open.spotify.com/show/3Krn2ePCbILvzORISjh2PT'}`, {
+		const res = await fetch(`https://api.shawn.party/api/pod-data/spotify?url=${spotifyUrl}`, {
 			next: { revalidate: 60 * 60 * 1 },
 		})
 		const data = await res.json()
@@ -33,7 +37,7 @@ export async function getSpotifyReviews() {
 
 export async function getEpisodes() {
 	try {
-		const res = await fetch('https://feed.podbean.com/blueharvestpodcast/feed.xml', {
+		const res = await fetch(rssFeedUrl, {
 			next: { revalidate: 60 * 60 * 1 },
 		})
 		const xml = await res.text()
@@ -60,7 +64,7 @@ export async function getEpisodes() {
 
 export async function getPatreonPreview() {
 	try {
-		const res = await fetch('https://api.shawn.party/api/blue-harvest/patreon-preview', {
+		const res = await fetch('https://api.shawn.party/api/patreon/blue-harvest', {
 			next: { revalidate: 60 * 60 * 1 },
 		})
 		const data = await res.json()

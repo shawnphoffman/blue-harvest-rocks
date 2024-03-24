@@ -1,6 +1,7 @@
 import 'app/global.css'
 
 import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Open_Sans } from 'next/font/google'
 import Image from 'next/image'
 
@@ -52,6 +53,7 @@ export default function RootLayout({ children }) {
 					</div>
 				</div>
 				<Analytics />
+				<SpeedInsights />
 			</body>
 		</html>
 	)

@@ -9,6 +9,7 @@ import ActiveLink from 'components/ActiveLink'
 import Background from 'components/Background'
 
 import titleLogo from './title-opt.png'
+// import titleLogoVec from './vec.svg'
 
 const openSans = Open_Sans({ subsets: ['latin'] })
 
@@ -39,6 +40,7 @@ export default function RootLayout({ children }) {
 						<div className={'page'}>
 							<div className={'header'}>
 								<Image className={'headerLogo'} alt="Blue Harvest" src={titleLogo} width={500} priority />
+								{/* <Image className={'headerLogo'} alt="Blue Harvest" src={titleLogoVec} width={500} priority /> */}
 								<div className="navContainer">
 									<ActiveLink href="/" label="Links" />
 									<ActiveLink href="/patreon-preview" label="Patreon Preview" />

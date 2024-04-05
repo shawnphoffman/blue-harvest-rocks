@@ -8,7 +8,7 @@ import Image from 'next/image'
 import ActiveLink from 'components/ActiveLink'
 import Background from 'components/Background'
 
-import titleLogo from './title.png'
+import titleLogo from './title-opt.png'
 
 const openSans = Open_Sans({ subsets: ['latin'] })
 

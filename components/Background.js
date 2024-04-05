@@ -2,7 +2,7 @@ import './Background.css'
 
 import Image from 'next/image'
 
-import bg from 'app/raccoon-trans.png'
+import bg from 'app/raccoon-trans-opt.png'
 
 export default function Background() {
 	return (

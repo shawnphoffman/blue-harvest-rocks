@@ -10,13 +10,13 @@ export default async function RatingsApple() {
 
 	return (
 		<a
-			className="flex flex-row items-center px-2 py-1 text-xs font-bold leading-normal text-white rounded-lg whitespace-nowrap bg-applepodcasts"
+			className="flex flex-row items-center px-2 py-1 text-sm font-bold leading-normal text-white rounded-lg whitespace-nowrap bg-applepodcasts"
 			href={appleData.appleRatingUrl || ''}
 			target="_blank"
 			rel="noopener noreferrer"
 		>
 			<div>{appleData.appleRating}</div>
-			<FontAwesomeIcon icon={'fa-solid fa-star-sharp' as IconProp} className="text-[0.65rem] mx-0.5" />
+			<FontAwesomeIcon icon={'fa-solid fa-star-sharp' as IconProp} className="text-[0.85rem] mx-0.5" />
 			<div>on Apple Podcasts</div>
 		</a>
 	)

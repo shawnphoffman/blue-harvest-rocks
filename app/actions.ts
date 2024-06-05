@@ -4,7 +4,7 @@ import { XMLParser } from 'fast-xml-parser'
 
 import { appleRatingUrl, rssFeedUrl, spotifyUrl } from './(pages)/(links)/links'
 
-export async function getReviews() {
+export async function getAppleReviews() {
 	try {
 		const res = await fetch(`https://api.shawn.party/api/pod-data/apple?url=${appleRatingUrl}`, {
 			next: { revalidate: 60 * 60 * 1 },

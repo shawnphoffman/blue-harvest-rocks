@@ -1,10 +1,10 @@
-import { getReviews } from '@/app/actions'
+import { getAppleReviews } from '@/app/actions'
 
 import styles from './Reviews.module.css'
 import Stars from './Stars'
 
 export default async function Reviews() {
-	const [{ reviews }] = await Promise.all([getReviews()])
+	const [{ reviews }] = await Promise.all([getAppleReviews()])
 
 	if (!reviews) return null
 

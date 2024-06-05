@@ -13,7 +13,7 @@ export default function Episodes({ episode }) {
 				<Image src={episode.imgSrc} alt={episode.title} className="w-32 rounded md:w-48 h-fit aspect-square" width={192} height={192} />
 				<div className="flex flex-col self-stretch overflow-hidden whitespace-break-spaces text-wrap text-ellipsis">
 					<div className="mb-2 text-md font-semibold text-white/75">{pubDate}</div>
-					<div className="[&_a]:text-brand-blue mb-1 [&_a]:pb-0.5 [&_a]:font-bold [&_a:hover]:text-brand-yellow [&_a:hover]:bg-squiggle [&_a]:break-words">
+					<div className="[&_a]:text-brand-bh4 mb-1 [&_a]:pb-0.5 [&_a]:font-bold [&_a:hover]:text-brand-bh3 [&_a:hover]:underline [&_a]:break-words">
 						<EpisodeSummary summary={episode.summary} />
 					</div>
 					<div className="flex items-end flex-1">

@@ -32,8 +32,8 @@ export default async function Reviews() {
 					<div className="flex flex-col justify-start w-full p-2 text-left" key={r.title}>
 						<div className="flex flex-row items-center justify-between">
 							<div className="flex flex-col items-start gap-2 sm:flex-row sm:items-center ">
-								<div className="font-bold text-brand-blue">{`"${r.title}"`}</div>
-								<div className="text-base italic text-brand-blue/75">{r.author}</div>
+								<div className="font-bold text-brand-bh5">{`"${r.title}"`}</div>
+								<div className="text-base italic text-brand-bh5/75">{r.author}</div>
 							</div>
 							<Stars count={r.stars} />
 						</div>

@@ -11,7 +11,7 @@ const myPortableTextComponents: Partial<PortableTextReactComponents> = {
 			return <span className="text-red-500">{children}</span>
 		},
 		textBlue: ({ children }) => {
-			return <span className="text-brand-blue">{children}</span>
+			return <span className="text-blue-500">{children}</span>
 		},
 		textGreen: ({ children }) => {
 			return <span className="text-green-500">{children}</span>
@@ -20,7 +20,7 @@ const myPortableTextComponents: Partial<PortableTextReactComponents> = {
 			return <span className="underline underline-offset-2 decoration-brand-bh5">{children}</span>
 		},
 		'strike-through': ({ children }) => {
-			return <span className="line-through decoration-brand-blue decoration-2">{children}</span>
+			return <span className="line-through decoration-brand-bh5 decoration-2">{children}</span>
 		},
 	},
 	types: {

@@ -14,7 +14,7 @@ export default async function PatreonPreview() {
 			</div>
 			<div className={'patreonWrapper'}>
 				{data.map(d => (
-					<PatreonEntry key={d.guid} data={d} />
+					<PatreonEntry key={d.link} data={d} />
 				))}
 			</div>
 		</>

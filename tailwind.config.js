@@ -25,9 +25,6 @@ module.exports = {
 					// yellow: colors.yellow['400'],
 				},
 			},
-			// backgroundImage: {
-			// 	squiggle: "url('/squiggle.svg')",
-			// },
 			keyframes: {
 				fadeInUp: {
 					'0%': { opacity: 0 },

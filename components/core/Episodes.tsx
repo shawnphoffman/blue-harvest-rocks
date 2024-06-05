@@ -64,13 +64,13 @@ const Episodes = ({ episodes }) => {
 				<input
 					type="text"
 					id="search"
-					className="block w-full px-4 py-2 text-base leading-5 text-white border rounded-lg placeholder-zinc-500 border-zinc-500 bg-zinc-900 focus:border-brand-blue focus-visible:outline-brand-bh5/75 focus-visible:outline-offset-2 focus-visible:outline-dashed focus-visible:outline-2"
+					className="block w-full px-4 py-2 text-base leading-5 text-white border rounded-lg placeholder-zinc-500 border-zinc-500 bg-zinc-900 focus:border-brand-bh5 focus-visible:outline-brand-bh5/75 focus-visible:outline-offset-2 focus-visible:outline-dashed focus-visible:outline-2"
 					placeholder="Search"
 					onChange={handleSearch}
 				/>
 			</div>
 
-			<div className="flex flex-col items-center w-full border-t divide-y divide-brand-blue border-t-brand-blue">
+			<div className="flex flex-col items-center w-full border-t divide-y divide-brand-bh5 border-t-brand-bh5">
 				<Suspense fallback={<Loading />}>
 					<EpisodeList episodes={filtered} />
 				</Suspense>

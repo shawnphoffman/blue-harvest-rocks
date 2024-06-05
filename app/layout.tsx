@@ -7,7 +7,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Open_Sans } from 'next/font/google'
 import Image from 'next/image'
 
-import ActiveLink from '@/components/ActiveLink'
+import ActiveLink from '@/components/core/ActiveLink'
 import Background from '@/components/Background'
 
 import titleLogo from './title-opt.png'
@@ -29,7 +29,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
 	return (
-		<html lang="en" className={openSans.className}>
+		<html lang="en" className={`${openSans.className} bg-black`}>
 			<head>
 				{/* <script src="https://kit.fontawesome.com/d7ccc5bb1a.js" crossOrigin="anonymous" defer></script> */}
 				<meta name="apple-itunes-app" content="app-id=1009917662" />
@@ -41,22 +41,26 @@ export default function RootLayout({ children }) {
 						<div className={'page'}>
 							<div className={'header'}>
 								<Image className={'headerLogo'} alt="Blue Harvest" src={titleLogo} width={500} priority />
-								{/* <Image className={'headerLogo'} alt="Blue Harvest" src={titleLogoVec} width={500} priority /> */}
-								<nav className="navContainer">
+								{/* <nav className="navContainer border-4 border-brand-bh2/50 px-4 py-3 bg-brand-bh1/75 rounded-xl"> */}
+								<nav className="navContainer border-4 border-brand-bh2/50 px-4 py-3 bg-black/50 rounded-xl">
 									<ActiveLink href="/" label="Links" />
+									{!process.env.VERCEL_ENV && <ActiveLink href="/episodes" label="Episodes" />}
+									{!process.env.VERCEL_ENV && <ActiveLink href="/updates" label="Updates" fuzzy />}
 									<ActiveLink href="/patreon-preview" label="Patreon Preview" />
-									<ActiveLink href="/episodes" label="Episodes" />
-									{/* <ActiveLink href="/friends" label="Friends" /> */}
 									<ActiveLink href="/listen-now" label="Listen Now" />
-									<ActiveLink href="/discord" label="Discord" />
+									{/* <ActiveLink href="/discord" label="Discord" /> */}
 								</nav>
 							</div>
 							<div className={'pageDetails'}>{children}</div>
 						</div>
 					</div>
 				</div>
-				<Analytics />
-				<SpeedInsights />
+				{process.env.VERCEL_ENV && (
+					<>
+						<Analytics />
+						<SpeedInsights />
+					</>
+				)}
 			</body>
 		</html>
 	)

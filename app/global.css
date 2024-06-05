@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
 	--bg: #111;
 	--text: #fff;
@@ -42,12 +46,12 @@ html body {
 }
 a {
 	transition: color 150ms ease-in;
-	color: var(--bh4);
+	/* color: var(--bh4); */
 	/* color: var(--white); */
 	text-decoration: none;
 }
 a:hover {
-	color: var(--bh4);
+	/* color: var(--bh4); */
 	/* color: var(--white); */
 }
 

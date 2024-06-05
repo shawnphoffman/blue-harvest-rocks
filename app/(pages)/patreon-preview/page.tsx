@@ -1,5 +1,5 @@
-import { getPatreonPreview } from 'app/actions'
-import PatreonEntry from 'components/PatreonEntry'
+import { getPatreonPreview } from '@/app/actions'
+import PatreonEntry from '@/components/PatreonEntry'
 
 export const revalidate = 3600
 export const dynamic = 'force-dynamic'

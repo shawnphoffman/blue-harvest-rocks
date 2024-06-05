@@ -1,15 +1,16 @@
-import 'app/global.css'
+import '@/app/global.css'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+import '@/app/(pages)/icons'
 
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Open_Sans } from 'next/font/google'
 import Image from 'next/image'
 
-import ActiveLink from 'components/ActiveLink'
-import Background from 'components/Background'
+import ActiveLink from '@/components/ActiveLink'
+import Background from '@/components/Background'
 
 import titleLogo from './title-opt.png'
-// import titleLogoVec from './vec.svg'
 
 const openSans = Open_Sans({ subsets: ['latin'] })
 
@@ -30,7 +31,7 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="en" className={openSans.className}>
 			<head>
-				<script src="https://kit.fontawesome.com/d7ccc5bb1a.js" crossOrigin="anonymous" defer></script>
+				{/* <script src="https://kit.fontawesome.com/d7ccc5bb1a.js" crossOrigin="anonymous" defer></script> */}
 				<meta name="apple-itunes-app" content="app-id=1009917662" />
 			</head>
 			<body>
@@ -41,14 +42,14 @@ export default function RootLayout({ children }) {
 							<div className={'header'}>
 								<Image className={'headerLogo'} alt="Blue Harvest" src={titleLogo} width={500} priority />
 								{/* <Image className={'headerLogo'} alt="Blue Harvest" src={titleLogoVec} width={500} priority /> */}
-								<div className="navContainer">
+								<nav className="navContainer">
 									<ActiveLink href="/" label="Links" />
 									<ActiveLink href="/patreon-preview" label="Patreon Preview" />
-									{/* <ActiveLink href="/episodes" label="Episodes" /> */}
+									<ActiveLink href="/episodes" label="Episodes" />
 									{/* <ActiveLink href="/friends" label="Friends" /> */}
 									<ActiveLink href="/listen-now" label="Listen Now" />
 									<ActiveLink href="/discord" label="Discord" />
-								</div>
+								</nav>
 							</div>
 							<div className={'pageDetails'}>{children}</div>
 						</div>

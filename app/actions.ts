@@ -38,7 +38,7 @@ export async function getSpotifyReviews() {
 export async function getEpisodes() {
 	try {
 		const res = await fetch(rssFeedUrl, {
-			next: { revalidate: 60 * 60 * 1 },
+			// next: { revalidate: 60 * 60 * 1 },
 		})
 		const xml = await res.text()
 		const parser = new XMLParser({
@@ -46,18 +46,22 @@ export async function getEpisodes() {
 			attributeNamePrefix: '@_',
 		})
 		const parsed = parser.parse(xml)
-		const episodes = parsed.rss.channel.item.map(ep => ({
-			guid: ep.guid['#text'],
-			title: ep.title,
-			imgSrc: ep['itunes:image']['@_href'],
-			summary: ep['itunes:summary'],
-			link: ep.link,
-			pubDate: ep.pubDate,
-		}))
+		const episodes = parsed.rss.channel.item.map(ep => {
+			return {
+				guid: ep.guid['#text'],
+				title: ep.title,
+				imgSrc: ep['itunes:image'] ? ep['itunes:image']['@_href'] : parsed.rss.channel['itunes:image']['@_href'],
+				// summary: ep['itunes:summary'],
+				summary: cleanEpisodeSummary(ep['itunes:summary']),
+				link: ep.link,
+				pubDate: ep.pubDate,
+			}
+		})
 		return {
 			episodes,
 		}
 	} catch (error) {
+		console.error('getEpisodes', error)
 		return {}
 	}
 }
@@ -74,4 +78,18 @@ export async function getPatreonPreview() {
 	} catch {
 		return {}
 	}
+}
+
+function cleanEpisodeSummary(text: string) {
+	const index = text.indexOf('Check out our website:')
+	if (index !== -1) {
+		text = text.substring(0, index).trim()
+	}
+
+	const i2 = text.indexOf('Support us on Patreon')
+	if (i2 !== -1) {
+		text = text.substring(0, i2).trim()
+	}
+
+	return text
 }

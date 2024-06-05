@@ -1,7 +1,7 @@
 import { getPatreonPreview } from 'app/actions'
 import PatreonEntry from 'components/PatreonEntry'
 
-export const revalidate = 60 * 60 // 1 hour
+export const revalidate = 3600
 export const dynamic = 'force-dynamic'
 
 export default async function PatreonPreview() {

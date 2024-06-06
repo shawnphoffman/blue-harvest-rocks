@@ -5,7 +5,11 @@ export default function sitemap() {
 			lastModified: new Date(),
 		},
 		{
-			url: 'https://blueharvest.rocks/discord',
+			url: 'https://blueharvest.rocks/episodes',
+			lastModified: new Date(),
+		},
+		{
+			url: 'https://blueharvest.rocks/updates',
 			lastModified: new Date(),
 		},
 		{

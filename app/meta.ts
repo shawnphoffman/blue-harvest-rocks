@@ -1,4 +1,3 @@
-export const siteTitle = `Just Shillin' Podcast`
-export const siteDescription =
-	'Join Andy and Shawn for a casual and light-hearted podcast experience. Discover what happens when two friends come together to share their love for the things that make life awesome'
-export const siteUrl = 'https://justshillin.com'
+export const siteTitle = 'Blue Harvest'
+export const siteDescription = 'A Star Wars podcast hosted by Hawes Burkhardt and Will Whitten'
+export const siteUrl = 'https://blueharvest.rocks/'

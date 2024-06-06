@@ -1,5 +1,4 @@
 import tailwindColors from '@shawnphoffman/pod-sites-common/tailwind'
-// import colors from 'tailwindcss/colors'
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {

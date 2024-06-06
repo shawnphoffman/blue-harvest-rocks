@@ -26,7 +26,7 @@ export default function Episodes({ episode }) {
 					)}
 					<div className="flex items-end flex-1">
 						<a
-							className=" text-base font-bold text-boba-gold decoration-boba-grayn decoration-2 hover:underline underline-offset-2"
+							className="text-base font-bold text-boba-gold decoration-boba-grayn decoration-2 hover:underline underline-offset-2"
 							target="_blank"
 							href={episode.link ? episode.link : 'https://zencastr.com/Just-Shillin'}
 						>

@@ -17,7 +17,6 @@ module.exports = {
 					green: 'rgb(162, 197, 183)',
 					border: 'rgb(83 100 75 / 0.5)', // borders
 					red: 'rgb(117 53 54)', // underlines
-					// gray: 'rgb(208 217 228)', //
 					grayn: 'rgb(116 132 116)', // muted
 				},
 			},

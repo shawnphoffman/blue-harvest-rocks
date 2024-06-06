@@ -7,8 +7,8 @@ import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Open_Sans } from 'next/font/google'
 import Image from 'next/image'
 
-import ActiveLink from '@/components/core/ActiveLink'
 import Background from '@/components/Background'
+import ActiveLink from '@/components/core/ActiveLink'
 
 import titleLogo from './title-opt.png'
 

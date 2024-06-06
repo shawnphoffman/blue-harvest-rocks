@@ -2,13 +2,13 @@
 import {
 	faAmazon,
 	faBluesky,
-	faSpotify,
-	faYoutube,
-	faXTwitter,
 	faDiscord,
-	faTwitch,
-	faPatreon,
 	faInstagram,
+	faPatreon,
+	faSpotify,
+	faTwitch,
+	faXTwitter,
+	faYoutube,
 } from '@awesome.me/kit-d7ccc5bb1a/icons/classic/brands'
 // CLASSIC - SOLID
 import {

@@ -41,7 +41,7 @@ export default function RootLayout({ children }) {
 			<head>
 				<meta name="apple-itunes-app" content="app-id=1009917662" />
 			</head>
-			<body className="p-4 mx-auto my-0 text-white min-h-dvh w-dvw">
+			<body className="p-4 mx-auto my-0 text-white bg-black min-h-dvh w-dvw">
 				<Background />
 				{/* WRAPPER */}
 				<div className="flex flex-col items-center w-full max-w-screen-xl mx-auto">
@@ -53,7 +53,7 @@ export default function RootLayout({ children }) {
 							<Image className="w-full max-w-md" alt="" src={titleLogo} width={448} priority />
 
 							{/* NAV */}
-							<nav className="flex flex-row flex-wrap justify-center gap-4 px-4 py-3 border-4 border-boba-border bg-black/50 rounded-xl">
+							<nav className="flex flex-row flex-wrap justify-center px-4 py-1 border-4 sm:py-3 gap-y-1 gap-x-4 border-boba-border bg-black/50 rounded-xl">
 								<ActiveLink href="/" label="Links" />
 								<ActiveLink href="/episodes" label="Episodes" />
 								{!process.env.VERCEL_ENV && <ActiveLink href="/updates" label="Updates" fuzzy />}

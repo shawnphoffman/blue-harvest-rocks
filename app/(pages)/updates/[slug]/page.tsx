@@ -19,7 +19,7 @@ export default async function PostPage({ params }: PageProps) {
 
 	// console.log(post)
 
-	if (!post) {
+	if (!post?._id) {
 		return notFound()
 	}
 

@@ -9,7 +9,7 @@ export default async function PatreonPreview() {
 				Here is a preview of the most recent episodes released on the Blue Harvest Patreon. <strong>This</strong> is the content you&apos;re
 				looking for.
 			</div>
-			<div className="w-full border-4 rounded-xl border-brand-bh2/50 bg-black/50">
+			<div className="w-full border-4 rounded-xl border-boba-border bg-black/50">
 				{data.map(d => (
 					<PatreonRow key={d.link} data={d} />
 				))}

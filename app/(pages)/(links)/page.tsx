@@ -1,9 +1,11 @@
 import { Suspense } from 'react'
 
 import LinkCard from '@/components/core/LinkCard'
+import Loading from '@/components/core/Loading'
 import RatingsApple from '@/components/core/RatingsApple'
+import RatingsGoodpods from '@/components/core/RatingsGoodpods'
 import RatingsSpotify from '@/components/core/RatingsSpotify'
-import Reviews from '@/components/Reviews'
+import Reviews from '@/components/core/Reviews'
 
 import items from './links'
 
@@ -14,13 +16,16 @@ export default async function Home() {
 				A Star Wars podcast hosted by two long-time friends, Hawes Burkhardt and Will Whitten. Check out the Patreon for even more exclusive
 				content or hop on Twitch to join the fun.
 			</div>
-			<div className="ratingsWrapper">
-				<Suspense>
+
+			<div className="flex flex-row flex-wrap items-center justify-center gap-2 mb-2">
+				<Suspense fallback="">
 					<RatingsApple />
+					<RatingsGoodpods />
 					<RatingsSpotify />
 				</Suspense>
 			</div>
-			<div className={'pageRow'}>
+
+			<div className="flex flex-row flex-wrap justify-center w-full gap-4">
 				{items.map((item, i) => {
 					return (
 						<LinkCard
@@ -35,11 +40,9 @@ export default async function Home() {
 				})}
 			</div>
 
-			<div className={'pageRow'}>
-				<Suspense>
-					<Reviews />
-				</Suspense>
-			</div>
+			<Suspense fallback={<Loading />}>
+				<Reviews />
+			</Suspense>
 		</>
 	)
 }

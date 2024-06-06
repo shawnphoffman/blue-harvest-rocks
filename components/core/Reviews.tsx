@@ -25,19 +25,21 @@ export default async function Reviews() {
 	if (!filteredReviews || !filteredReviews.length) return null
 
 	return (
-		<div className="flex flex-row flex-wrap justify-center w-full mt-2">
-			<div className="text-2xl font-bold ">Recent Reviews</div>
-			<div className="flex flex-col w-full px-2 mb-8 divide-y rounded-lg bg-zinc-950/75 divide-brand-bh5">
+		<div className="flex flex-col items-center justify-center w-full mt-4 gap-2">
+			<div className="text-3xl font-bold ">Recent Reviews</div>
+			<div className="border-4 rounded-xl border-boba-border bg-black/50 divide-y-2 divide-boba-border">
 				{filteredReviews.map((r: Review) => (
-					<div className="flex flex-col justify-start w-full p-2 text-left" key={r.title}>
-						<div className="flex flex-row items-center justify-between">
-							<div className="flex flex-col items-start gap-2 sm:flex-row sm:items-center ">
-								<div className="font-bold text-brand-bh5">{`"${r.title}"`}</div>
-								<div className="text-base italic text-brand-bh5/75">{r.author}</div>
+					<div key={r.title} className="p-2 m-2">
+						<div className="flex flex-col justify-start text-left rounded-lg gap-2">
+							<div className="flex flex-row items-center justify-between">
+								<div className="flex flex-col items-start gap-1 sm:gap-4 sm:flex-row sm:items-center">
+									<div className="font-bold text-boba-green">{`"${r.title}"`}</div>
+									<div className="text-sm italic text-boba-grayn">{r.author}</div>
+								</div>
+								<Stars count={r.stars} />
 							</div>
-							<Stars count={r.stars} />
+							<div className="text-sm leading-normal sm:pl-2">{r.text}</div>
 						</div>
-						<div className="pt-2">{r.text}</div>
 					</div>
 				))}
 			</div>

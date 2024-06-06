@@ -6,7 +6,7 @@ import Episodes from '@/components/core/Episodes'
 export default async function EpisodesPage() {
 	const data = await getEpisodes()
 	return (
-		<div className="w-full max-w-3xl p-4 mb-8 border-4 rounded-xl border-brand-bh2/50 bg-black/50">
+		<div className="w-full max-w-3xl p-4 border-4 rounded-xl border-boba-border bg-black/50">
 			<Episodes episodes={data.episodes} />
 		</div>
 	)

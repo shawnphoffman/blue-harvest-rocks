@@ -29,29 +29,35 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
 	return (
-		<html lang="en" className={`${openSans.className} bg-black`}>
+		<html lang="en" className={`${openSans.className} bg-black h-full p-0 m-0 overflow-x-hidden w-dvw`}>
 			<head>
 				<meta name="apple-itunes-app" content="app-id=1009917662" />
 			</head>
-			<body>
+			<body className="p-4 mx-auto my-0 text-white min-h-dvh w-dvw">
 				<Background />
-				<div className="scroller">
-					<div className={'wrapper'}>
-						<div className={'page'}>
-							<div className={'header'}>
-								<Image className={'headerLogo'} alt="Blue Harvest" src={titleLogo} width={500} priority />
-								<nav className="navContainer border-4 border-brand-bh2/50 px-4 py-3 bg-black/50 rounded-xl">
-									<ActiveLink href="/" label="Links" />
-									{!process.env.VERCEL_ENV && <ActiveLink href="/episodes" label="Episodes" />}
-									{!process.env.VERCEL_ENV && <ActiveLink href="/updates" label="Updates" fuzzy />}
-									<ActiveLink href="/patreon-preview" label="Patreon Preview" />
-									<ActiveLink href="/listen-now" label="Listen Now" />
-								</nav>
-							</div>
-							<div className={'pageDetails pb-8'}>{children}</div>
+				{/* WRAPPER */}
+				<div className="flex flex-col items-center w-full max-w-screen-xl mx-auto">
+					<div className="flex flex-col w-full max-w-4xl min-h-dvh gap-4">
+						{/* HEADER */}
+						<div className="flex flex-col items-center text-center gap-4">
+							{/* IMAGE */}
+							<h1 className="sr-only">{metadata.title}</h1>
+							<Image className="w-full max-w-md" alt="" src={titleLogo} width={448} priority />
+
+							{/* NAV */}
+							<nav className="flex flex-row flex-wrap justify-center gap-4 border-4 border-boba-border px-4 py-3 bg-black/50 rounded-xl">
+								<ActiveLink href="/" label="Links" />
+								<ActiveLink href="/episodes" label="Episodes" />
+								{!process.env.VERCEL_ENV && <ActiveLink href="/updates" label="Updates" fuzzy />}
+								<ActiveLink href="/patreon-preview" label="Patreon Preview" />
+								<ActiveLink href="/listen-now" label="Listen Now" />
+							</nav>
 						</div>
+						{/* PAGE CONTENT */}
+						<main className="flex flex-col items-center flex-1 gap-4 text-center">{children}</main>
 					</div>
 				</div>
+				{/* EXTRAS */}
 				{process.env.VERCEL_ENV && (
 					<>
 						<Analytics />

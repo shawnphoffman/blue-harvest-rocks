@@ -6,7 +6,7 @@ export default function PatreonRow({ data: d }) {
 	const pubDate = new Date(d.pubDate).toLocaleDateString('en-US', options)
 	return (
 		<a
-			className="flex flex-row p-2 hover:bg-brand-bh2/20 justify-between items-center  transition-colors"
+			className="flex flex-row p-2 hover:bg-boba-grayn/10 justify-between items-center transition-colors hover:text-white text-boba-green"
 			href={d.link}
 			target="_blank"
 			rel="noopener noreferrer"
@@ -15,7 +15,7 @@ export default function PatreonRow({ data: d }) {
 			<FontAwesomeIcon icon={faPatreon} className="flex-0 text-2xl text-patreon" />
 			<div className="flex-1 mx-4 text-left flex flex-col w-full gap-1">
 				<div className="text-lg font-bold leading-tight text-pretty">{d.title}</div>
-				<div className="text-brand-bh4 text-xs">{pubDate}</div>
+				<div className="text-boba-grayn text-xs">{pubDate}</div>
 			</div>
 		</a>
 	)

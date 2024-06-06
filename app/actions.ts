@@ -2,12 +2,12 @@
 
 import { XMLParser } from 'fast-xml-parser'
 
-import { appleRatingUrl, rssFeedUrl, spotifyUrl } from './(pages)/(links)/links'
+import { appleRatingUrl, goodpodsUrl, rssFeedUrl, spotifyUrl } from './(pages)/(links)/links'
 
 export async function getAppleReviews() {
 	try {
 		const res = await fetch(`https://api.shawn.party/api/pod-data/apple?url=${appleRatingUrl}`, {
-			next: { revalidate: 60 * 60 * 1 },
+			next: { revalidate: 60 * 60 * 6 },
 		})
 		const data = await res.json()
 		const { rating, ratingsUrl, reviews } = data
@@ -25,10 +25,23 @@ export async function getAppleReviews() {
 export async function getSpotifyReviews() {
 	try {
 		const res = await fetch(`https://api.shawn.party/api/pod-data/spotify?url=${spotifyUrl}`, {
-			next: { revalidate: 60 * 60 * 1 },
+			next: { revalidate: 60 * 60 * 6 },
 		})
 		const data = await res.json()
 		// console.log('getSpotifyReviews', data)
+		return data
+	} catch {
+		return {}
+	}
+}
+
+export async function getGoodpodsReviews() {
+	try {
+		const res = await fetch(`https://api.shawn.party/api/pod-data/goodpods?url=${goodpodsUrl}`, {
+			next: { revalidate: 60 * 60 * 6 },
+		})
+		const data = await res.json()
+		// console.log('getGoodpodsReviews', data)
 		return data
 	} catch {
 		return {}

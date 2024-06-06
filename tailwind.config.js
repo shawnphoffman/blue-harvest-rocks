@@ -12,17 +12,13 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				brand: {
-					bh1: 'rgb(27, 14, 8)',
-					bh2: 'rgb(96, 120, 101)',
-					bh3: 'rgb(106, 161, 143)',
-					bh4: 'rgb(162, 197, 183)',
-					bh5: 'rgb(138, 0, 16)',
-					bhBg: 'rgba(27, 14, 8, 0.5)',
-					bhHover: 'rgba(106, 161, 143, 0.15)',
-					// red: colors.red['600'],
-					// blue: colors.sky['400'],
-					// yellow: colors.yellow['400'],
+				boba: {
+					gold: 'rgb(205 157 68)', // stars, links
+					green: 'rgb(162, 197, 183)',
+					border: 'rgb(83 100 75 / 0.5)', // borders
+					red: 'rgb(117 53 54)', // underlines
+					// gray: 'rgb(208 217 228)', //
+					grayn: 'rgb(116 132 116)', // muted
 				},
 			},
 			keyframes: {

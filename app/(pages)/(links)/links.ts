@@ -4,6 +4,7 @@ export const applePodcastId = '1009917662'
 export const applePodcastUrl = `https://podcasts.apple.com/us/podcast/id${applePodcastId}`
 export const appleRatingUrl = `${applePodcastUrl}?see-all=reviews`
 export const rssFeedUrl = 'https://feed.podbean.com/blueharvestpodcast/feed.xml'
+export const goodpodsUrl = 'https://goodpods.com/podcasts/blue-harvest-a-star-wars-podcast-84967'
 
 const items = [
 	{
@@ -104,7 +105,7 @@ const items = [
 	},
 	{
 		title: 'Goodpods',
-		href: 'https://goodpods.com/podcasts/blue-harvest-a-star-wars-podcast-84967',
+		href: goodpodsUrl,
 		icon: 'fak fa-goodpods',
 		background: 'bg-goodpods',
 		color: 'text-black',

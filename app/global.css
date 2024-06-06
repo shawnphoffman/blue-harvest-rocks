@@ -28,7 +28,8 @@
 
 html {
 	background: var(--bg);
-	background: linear-gradient(180deg, var(--bg), var(--bg2) 100%);
+	/* background: linear-gradient(180deg, var(--bg), var(--bg2) 100%); */
+	background: linear-gradient(0deg, #00011e 0%, #000000 100%);
 	min-height: 100vh;
 	height: 100%;
 	overflow: hidden;
@@ -92,18 +93,6 @@ a:hover {
 	gap: 1rem;
 }
 
-.pageDescription {
-	font-size: 1.1rem;
-	line-height: 1.5;
-	width: 100%;
-	max-width: 800px;
-}
-@media screen and (max-width: 420px) {
-	.pageDescription {
-		font-size: 1rem;
-	}
-}
-
 .pageRow {
 	display: flex;
 	flex-direction: row;
@@ -159,10 +148,4 @@ a:hover {
 	flex-wrap: wrap;
 	justify-content: center;
 	margin-bottom: 0.25rem;
-}
-
-.patreonWrapper {
-	margin: 32px 0px;
-	max-width: 800px;
-	width: 100%;
 }

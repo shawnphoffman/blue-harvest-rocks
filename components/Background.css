@@ -5,7 +5,8 @@
 	overflow: hidden;
 	z-index: -1;
 	background: black;
-	background: linear-gradient(0deg, rgb(0, 1, 30) 0%, rgb(0, 0, 0) 100%);
+	/* background: linear-gradient(0deg, rgb(0, 1, 30) 0%, rgb(0, 0, 0) 100%); */
+	background: linear-gradient(0deg, #00011e 0%, #000000 100%);
 	display: flex;
 	justify-content: center;
 	align-items: center;

@@ -38,7 +38,7 @@ export async function getSpotifyReviews() {
 export async function getEpisodes() {
 	try {
 		const res = await fetch(rssFeedUrl, {
-			// next: { revalidate: 60 * 60 * 1 },
+			next: { tags: ['episodes'] },
 		})
 		const xml = await res.text()
 		const parser = new XMLParser({
@@ -51,7 +51,6 @@ export async function getEpisodes() {
 				guid: ep.guid['#text'],
 				title: ep.title,
 				imgSrc: ep['itunes:image'] ? ep['itunes:image']['@_href'] : parsed.rss.channel['itunes:image']['@_href'],
-				// summary: ep['itunes:summary'],
 				summary: cleanEpisodeSummary(ep['itunes:summary']),
 				link: ep.link,
 				pubDate: ep.pubDate,
@@ -69,11 +68,12 @@ export async function getEpisodes() {
 export async function getPatreonPreview() {
 	try {
 		const res = await fetch('https://api.shawn.party/api/patreon/blue-harvest', {
-			next: { revalidate: 60 * 60 * 1 },
+			// next: { revalidate: 60 * 60 * 1 },
+			next: { tags: ['patreon'] },
 		})
 		const data = await res.json()
 		return {
-			data: data.slice(0, 15),
+			data: data.slice(0, 25),
 		}
 	} catch {
 		return {}

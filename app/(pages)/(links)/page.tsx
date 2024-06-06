@@ -10,7 +10,7 @@ import items from './links'
 export default async function Home() {
 	return (
 		<>
-			<div className={'pageDescription'}>
+			<div className="w-full max-w-3xl text-base leading-normal sm:text-lg">
 				A Star Wars podcast hosted by two long-time friends, Hawes Burkhardt and Will Whitten. Check out the Patreon for even more exclusive
 				content or hop on Twitch to join the fun.
 			</div>

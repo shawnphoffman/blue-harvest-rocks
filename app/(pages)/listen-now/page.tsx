@@ -2,7 +2,7 @@
 
 export default function ListenNow() {
 	return (
-		<div className={'pageDescription'}>
+		<div className="w-full max-w-3xl text-base leading-normal sm:text-lg">
 			<iframe
 				className={'iframe'}
 				loading="lazy"

@@ -12,9 +12,7 @@ import {
 } from '@awesome.me/kit-d7ccc5bb1a/icons/classic/brands'
 // CLASSIC - SOLID
 import {
-	faAt,
 	faCoffeeBeans,
-	faPodcast,
 	faSnake,
 	faSpaceStationMoonConstruction,
 	faSquareRss,
@@ -22,7 +20,7 @@ import {
 	faStarSharp,
 } from '@awesome.me/kit-d7ccc5bb1a/icons/classic/solid'
 // DUO - SOLID
-import { faStar as faStarDuo } from '@awesome.me/kit-d7ccc5bb1a/icons/duotone/solid'
+import { faAt, faFlaskRoundPoison, faPodcast, faStar as faStarDuo } from '@awesome.me/kit-d7ccc5bb1a/icons/duotone/solid'
 // CUSTOM
 import {
 	faGoodpods,
@@ -63,4 +61,5 @@ library.add([
 	faInstagram,
 	faTeepublic,
 	faCoffeeBeans,
+	faFlaskRoundPoison,
 ])

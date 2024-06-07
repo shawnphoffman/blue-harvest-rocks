@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 import { getAwards } from '@/sanity/sanity.requests'
 
-import ImageWithFallback from './ImageWithFallback'
+// import ImageWithFallback from './ImageWithFallback'
 
 export default async function Awards() {
 	const awards = await getAwards()
@@ -23,8 +23,8 @@ export default async function Awards() {
 					</Link>
 				) : (
 					<div key={award._id} className={`flex flex-col items-center`}>
-						<ImageWithFallback src={award.imageUrl} alt="" width={award.width} height={award.height} />
-						{/* <Image src={award.imageUrl} alt="" width={award.width} height={award.height} /> */}
+						{/* <ImageWithFallback src={award.imageUrl} alt="" width={award.width} height={award.height} /> */}
+						<Image src={award.imageUrl} alt="" width={award.width} height={award.height} />
 					</div>
 				)
 			)}

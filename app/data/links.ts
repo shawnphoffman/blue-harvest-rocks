@@ -22,7 +22,7 @@ const items = [
 	{
 		title: 'Apple Podcasts',
 		href: applePodcastUrl,
-		icon: 'fa-solid fa-podcast',
+		icon: 'fa-duotone fa-podcast',
 		background: 'bg-applepodcasts',
 	},
 	{
@@ -32,21 +32,9 @@ const items = [
 		background: 'bg-spotify',
 	},
 	{
-		title: 'Twitch',
-		href: 'https://www.twitch.tv/blueharvestpod',
-		icon: 'fa-brands fa-twitch',
-		background: 'bg-twitch',
-	},
-	{
-		title: 'Instagram',
-		href: 'https://www.instagram.com/blueharvestpod',
-		icon: 'fa-brands fa-instagram',
-		background: 'bg-instagram',
-	},
-	{
 		title: 'Voicemails & Emails',
 		href: 'mailto:blueharvestpodcast@gmail.com',
-		icon: 'fa-solid fa-at',
+		icon: 'fa-duotone fa-at',
 		background: 'bg-email',
 	},
 	{
@@ -56,28 +44,17 @@ const items = [
 		background: 'bg-bluesky',
 	},
 	{
-		title: 'Threads',
-		href: 'https://www.threads.net/@blueharvestpod',
-		icon: 'fak fa-threads',
-		background: 'bg-threads',
-	},
-	{
 		title: 'Overcast',
 		href: 'https://overcast.fm/itunes1009917662',
 		icon: 'fak fa-overcast-1',
 		background: 'bg-overcast',
 	},
 	{
-		title: 'Merch Store',
-		href: 'https://www.teepublic.com/user/blueharvestpodcast',
-		icon: 'fak fa-teepublic',
-		background: 'bg-teepublic',
-	},
-	{
-		title: 'Discord',
-		href: 'https://discord.gg/CZFSuSpmD8',
-		icon: 'fa-brands fa-discord',
-		background: 'bg-discord',
+		title: 'Goodpods',
+		href: goodpodsUrl,
+		icon: 'fak fa-goodpods',
+		background: 'bg-goodpods',
+		color: 'text-black',
 	},
 	{
 		title: 'PodBean',
@@ -92,23 +69,52 @@ const items = [
 		background: 'bg-youtube',
 	},
 	{
+		title: 'Instagram',
+		href: 'https://www.instagram.com/blueharvestpod',
+		icon: 'fa-brands fa-instagram',
+		background: 'bg-instagram',
+	},
+	{
+		title: 'Threads',
+		href: 'https://www.threads.net/@blueharvestpod',
+		icon: 'fak fa-threads',
+		background: 'bg-threads',
+	},
+	{
 		title: 'RSS',
 		href: 'https://feed.podbean.com/blueharvestpodcast/feed.xml',
 		icon: 'fa-solid fa-square-rss',
 		background: 'bg-rss',
 	},
 	{
+		title: 'Twitch',
+		href: 'https://www.twitch.tv/blueharvestpod',
+		icon: 'fa-brands fa-twitch',
+		background: 'bg-twitch',
+	},
+	{
+		title: 'Merch Store',
+		href: 'https://www.teepublic.com/user/blueharvestpodcast',
+		icon: 'fak fa-teepublic',
+		background: 'bg-teepublic',
+	},
+	{
+		title: 'Discord',
+		href: 'https://discord.gg/CZFSuSpmD8',
+		icon: 'fa-brands fa-discord',
+		background: 'bg-discord',
+	},
+	{
+		title: 'High Potion',
+		href: 'https://myweirdfoot.com/home',
+		icon: 'fa-duotone fa-flask-round-poison',
+		background: 'bg-lime-700',
+	},
+	{
 		title: 'Stoned Cobra',
 		href: 'https://stonedcobra.bandcamp.com/',
 		icon: 'fa-solid fa-snake',
-		background: 'bg-lime-800',
-	},
-	{
-		title: 'Goodpods',
-		href: goodpodsUrl,
-		icon: 'fak fa-goodpods',
-		background: 'bg-goodpods',
-		color: 'text-black',
+		background: 'bg-lime-900',
 	},
 ]
 

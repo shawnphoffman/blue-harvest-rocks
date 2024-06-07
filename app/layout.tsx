@@ -41,7 +41,7 @@ export default function RootLayout({ children }) {
 			<head>
 				<meta name="apple-itunes-app" content="app-id=1009917662" />
 			</head>
-			<body className="p-4 mx-auto my-0 text-white bg-black min-h-dvh w-dvw">
+			<body className="p-4 mx-auto my-0 text-white min-h-dvh w-dvw">
 				<Background />
 				{/* WRAPPER */}
 				<div className="flex flex-col items-center w-full max-w-screen-xl mx-auto">

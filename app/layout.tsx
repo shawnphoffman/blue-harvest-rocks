@@ -58,11 +58,11 @@ export default function RootLayout({ children }) {
 							<nav className="flex flex-row flex-wrap justify-center px-4 py-1 border-4 sm:py-3 gap-y-1 gap-x-4 border-boba-border bg-black/50 rounded-xl">
 								<ActiveLink href="/">Links</ActiveLink>
 								<ActiveLink href="/episodes">Episodes</ActiveLink>
-								{/* {!process.env.VERCEL_ENV && (
+								{!process.env.VERCEL_ENV && (
 									<ActiveLink href="/updates" fuzzy>
 										News
 									</ActiveLink>
-								)} */}
+								)}
 								<ActiveLink href="/patreon-preview">
 									<span className="inline sm:hidden">
 										Patreon <FontAwesomeIcon icon={faFaceHandPeeking} />

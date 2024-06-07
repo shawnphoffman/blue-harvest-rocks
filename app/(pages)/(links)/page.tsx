@@ -1,6 +1,7 @@
 import { Suspense } from 'react'
 
 import items from '@/app/data/links'
+import Awards from '@/components/core/Awards'
 import LinkCard from '@/components/core/LinkCard'
 import Loading from '@/components/core/Loading'
 import RatingsApple from '@/components/core/RatingsApple'
@@ -24,7 +25,7 @@ export default async function Home() {
 				</Suspense>
 			</div>
 
-			<div className="flex flex-row flex-wrap justify-center w-full gap-4">
+			<div className="flex flex-row flex-wrap justify-center w-full gap-4 mb-4">
 				{items.map((item, i) => {
 					return (
 						<LinkCard
@@ -38,6 +39,10 @@ export default async function Home() {
 					)
 				})}
 			</div>
+
+			<Suspense>
+				<Awards />
+			</Suspense>
 
 			<Suspense fallback={<Loading />}>
 				<Reviews />

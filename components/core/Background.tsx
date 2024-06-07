@@ -12,7 +12,7 @@ export default function Background() {
 				src={bg}
 				width={700}
 				// placeholder="blur"
-				// priority
+				priority
 			/>
 		</div>
 	)

@@ -12,6 +12,12 @@ module.exports = {
 				protocol: 'https',
 				hostname: 'pbcdn1.podbean.com',
 			},
+			// {
+			// 	protocol: 'https',
+			// 	hostname: 'storage.googleapis.com',
+			// 	port: '',
+			// 	pathname: '/goodpods-images-bucket/**',
+			// },
 		],
 	},
 	async redirects() {

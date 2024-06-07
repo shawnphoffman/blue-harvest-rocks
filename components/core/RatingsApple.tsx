@@ -1,7 +1,7 @@
 import { faStarSharp } from '@awesome.me/kit-d7ccc5bb1a/icons/classic/solid'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import { getAppleReviews } from '@/app/actions'
+import { getAppleReviews } from '@/app/data/actions'
 
 export default async function RatingsApple() {
 	const appleData = await getAppleReviews()

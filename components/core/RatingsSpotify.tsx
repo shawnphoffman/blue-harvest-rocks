@@ -1,7 +1,20 @@
 import { faStarSharp } from '@awesome.me/kit-d7ccc5bb1a/icons/classic/solid'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import { getSpotifyReviews } from '@/app/actions'
+import { spotifyUrl } from '@/app/data/links'
+
+async function getSpotifyReviews() {
+	try {
+		const res = await fetch(`https://api.shawn.party/api/pod-data/spotify?url=${spotifyUrl}`, {
+			next: { revalidate: 21600 }, // 60 * 60 * 6
+		})
+		const data = await res.json()
+		// console.log('getSpotifyReviews', data)
+		return data
+	} catch {
+		return {}
+	}
+}
 
 export default async function RatingsSpotify() {
 	const spotifyData = await getSpotifyReviews()

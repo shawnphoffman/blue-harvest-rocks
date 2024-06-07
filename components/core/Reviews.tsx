@@ -1,4 +1,4 @@
-import { getAppleReviews } from '@/app/actions'
+import { getAppleReviews } from '@/app/data/actions'
 
 import Stars from './Stars'
 

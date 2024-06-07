@@ -26,7 +26,7 @@ import { faStar as faStarDuo } from '@awesome.me/kit-d7ccc5bb1a/icons/duotone/so
 // CUSTOM
 import {
 	faGoodpods,
-	faOvercast,
+	faOvercast1,
 	faPocketCasts,
 	faRadioPublic,
 	faTeepublic,
@@ -49,7 +49,7 @@ library.add([
 	faSpotify,
 	faYoutube,
 	faGoodpods,
-	faOvercast,
+	faOvercast1,
 	faPocketCasts,
 	faRadioPublic,
 	faYoutubeMusic,

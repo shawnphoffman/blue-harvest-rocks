@@ -64,7 +64,7 @@ const items = [
 	{
 		title: 'Overcast',
 		href: 'https://overcast.fm/itunes1009917662',
-		icon: 'fak fa-overcast fa-lg',
+		icon: 'fak fa-overcast-1',
 		background: 'bg-overcast',
 	},
 	{

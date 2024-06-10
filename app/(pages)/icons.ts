@@ -24,7 +24,7 @@ import { faAt, faFlaskRoundPoison, faPodcast, faStar as faStarDuo } from '@aweso
 // CUSTOM
 import {
 	faGoodpods,
-	faOvercast1,
+	faOvercast,
 	faPocketCasts,
 	faRadioPublic,
 	faTeepublic,
@@ -47,7 +47,7 @@ library.add([
 	faSpotify,
 	faYoutube,
 	faGoodpods,
-	faOvercast1,
+	faOvercast,
 	faPocketCasts,
 	faRadioPublic,
 	faYoutubeMusic,

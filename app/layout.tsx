@@ -1,11 +1,11 @@
 import '@/app/global.css'
 import '@fortawesome/fontawesome-svg-core/styles.css'
-import '@/app/(pages)/icons'
 
 import { faFaceHandPeeking } from '@awesome.me/kit-d7ccc5bb1a/icons/duotone/solid'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import { Metadata } from 'next'
 import { Open_Sans } from 'next/font/google'
 import Image from 'next/image'
 
@@ -13,11 +13,12 @@ import titleLogo from '@/app/images/title.png'
 import ActiveLink from '@/components/core/ActiveLink'
 import Background from '@/components/core/Background'
 
+import { applePodcastId } from './data/links'
 import { siteDescription, siteTitle, siteUrl } from './data/meta'
 
 const openSans = Open_Sans({ subsets: ['latin'] })
 
-export const metadata = {
+export const metadata: Metadata = {
 	title: {
 		template: `%s | ${siteTitle}`,
 		default: siteTitle,
@@ -35,14 +36,14 @@ export const metadata = {
 		locale: 'en_US',
 		type: 'website',
 	},
+	itunes: {
+		appId: applePodcastId,
+	},
 }
 
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en" className={`${openSans.className} bg-black h-full p-0 m-0 overflow-x-hidden w-dvw`}>
-			<head>
-				<meta name="apple-itunes-app" content="app-id=1009917662" />
-			</head>
 			<body className="p-4 mx-auto my-0 text-white min-h-dvh w-dvw">
 				<Background />
 				{/* WRAPPER */}

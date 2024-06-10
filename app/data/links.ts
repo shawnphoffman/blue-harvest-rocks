@@ -1,3 +1,19 @@
+import {
+	faBluesky,
+	faDiscord,
+	faInstagram,
+	faPatreon,
+	faSpotify,
+	faThreads,
+	faTwitch,
+	faXTwitter,
+	faYoutube,
+} from '@awesome.me/kit-d7ccc5bb1a/icons/classic/brands'
+import { faAt, faCoffeeBeans, faRssSquare, faSnake } from '@awesome.me/kit-d7ccc5bb1a/icons/classic/solid'
+import { faPodcast } from '@awesome.me/kit-d7ccc5bb1a/icons/duotone/solid'
+import { faGoodpods, faHighPotionBalls, faOvercast, faTeepublic } from '@awesome.me/kit-d7ccc5bb1a/icons/kit/custom'
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core'
+
 export const spotifyId = '3Krn2ePCbILvzORISjh2PT'
 export const spotifyUrl = `https://open.spotify.com/show/${spotifyId}`
 export const applePodcastId = '1009917662'
@@ -6,114 +22,122 @@ export const appleRatingUrl = `${applePodcastUrl}?see-all=reviews`
 export const rssFeedUrl = 'https://feed.podbean.com/blueharvestpodcast/feed.xml'
 export const goodpodsUrl = 'https://goodpods.com/podcasts/blue-harvest-a-star-wars-podcast-84967'
 
-const items = [
+type Link = {
+	title: string
+	href: string
+	icon: IconDefinition
+	background: string
+	color?: string
+}
+
+const items: Link[] = [
 	{
 		title: 'Twitter',
 		href: 'https://twitter.com/BlueHarvestPod',
-		icon: 'fa-brands fa-x-twitter',
+		icon: faXTwitter,
 		background: 'bg-twitter',
 	},
 	{
 		title: 'Patreon',
 		href: 'https://www.patreon.com/blueharvestpodcast',
-		icon: 'fa-brands fa-patreon',
+		icon: faPatreon,
 		background: 'bg-patreon',
 	},
 	{
 		title: 'Apple Podcasts',
 		href: applePodcastUrl,
-		icon: 'fa-duotone fa-podcast',
+		icon: faPodcast,
 		background: 'bg-applepodcasts',
 	},
 	{
 		title: 'Spotify',
 		href: spotifyUrl,
-		icon: 'fa-brands fa-spotify',
+		icon: faSpotify,
 		background: 'bg-spotify',
 	},
 	{
 		title: 'Voicemails & Emails',
 		href: 'mailto:blueharvestpodcast@gmail.com',
-		icon: 'fa-duotone fa-at',
+		icon: faAt,
 		background: 'bg-email',
 	},
 	{
 		title: 'Bluesky',
 		href: 'https://bsky.app/profile/blueharvest.bsky.social',
-		icon: 'fa-brands fa-bluesky',
+		icon: faBluesky,
 		background: 'bg-bluesky',
 	},
 	{
 		title: 'Overcast',
 		href: 'https://overcast.fm/itunes1009917662',
-		icon: 'fak fa-overcast-1',
+		icon: faOvercast,
 		background: 'bg-overcast',
 	},
 	{
 		title: 'Goodpods',
 		href: goodpodsUrl,
-		icon: 'fak fa-goodpods',
+		icon: faGoodpods,
 		background: 'bg-goodpods',
 		color: 'text-black',
 	},
 	{
 		title: 'PodBean',
 		href: 'https://blueharvestpodcast.podbean.com/',
-		icon: 'fa-solid fa-coffee-beans',
+		icon: faCoffeeBeans,
 		background: 'bg-podbean',
 	},
 	{
 		title: 'YouTube',
 		href: 'https://www.youtube.com/BlueHarvestAStarWarsPodcast',
-		icon: 'fa-brands fa-youtube',
+		icon: faYoutube,
 		background: 'bg-youtube',
 	},
 	{
 		title: 'Instagram',
 		href: 'https://www.instagram.com/blueharvestpod',
-		icon: 'fa-brands fa-instagram',
+		icon: faInstagram,
 		background: 'bg-instagram',
 	},
 	{
 		title: 'Threads',
 		href: 'https://www.threads.net/@blueharvestpod',
-		icon: 'fak fa-threads',
+		icon: faThreads,
 		background: 'bg-threads',
 	},
 	{
 		title: 'RSS',
 		href: 'https://feed.podbean.com/blueharvestpodcast/feed.xml',
-		icon: 'fa-solid fa-square-rss',
+		icon: faRssSquare,
 		background: 'bg-rss',
 	},
 	{
 		title: 'Twitch',
 		href: 'https://www.twitch.tv/blueharvestpod',
-		icon: 'fa-brands fa-twitch',
+		icon: faTwitch,
 		background: 'bg-twitch',
 	},
 	{
 		title: 'Merch Store',
 		href: 'https://www.teepublic.com/user/blueharvestpodcast',
-		icon: 'fak fa-teepublic',
+		icon: faTeepublic,
 		background: 'bg-teepublic',
 	},
 	{
 		title: 'Discord',
 		href: 'https://discord.gg/CZFSuSpmD8',
-		icon: 'fa-brands fa-discord',
+		icon: faDiscord,
 		background: 'bg-discord',
 	},
 	{
 		title: 'High Potion',
 		href: 'https://myweirdfoot.com/home',
-		icon: 'fa-duotone fa-flask-round-poison',
+		icon: faHighPotionBalls,
 		background: 'bg-lime-700',
 	},
 	{
 		title: 'Stoned Cobra',
 		href: 'https://stonedcobra.bandcamp.com/',
-		icon: 'fa-solid fa-snake',
+		icon: faSnake,
 		background: 'bg-lime-900',
 	},
 ]

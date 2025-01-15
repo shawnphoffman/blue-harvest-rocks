@@ -55,5 +55,9 @@ function cleanEpisodeSummary(text: string) {
 		text = text.substring(0, i2).trim()
 	}
 
+	if (text?.toLowerCase().indexOf('criss') > -1) {
+		return ''
+	}
+
 	return text
 }

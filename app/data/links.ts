@@ -6,7 +6,7 @@ import {
 	faSpotify,
 	faThreads,
 	faTwitch,
-	faXTwitter,
+	// faXTwitter,
 	faYoutube,
 } from '@awesome.me/kit-d7ccc5bb1a/icons/classic/brands'
 import { faAt, faCoffeeBeans, faRssSquare, faSnake } from '@awesome.me/kit-d7ccc5bb1a/icons/classic/solid'
@@ -31,18 +31,12 @@ type Link = {
 }
 
 const items: Link[] = [
-	{
-		title: 'Twitter',
-		href: 'https://twitter.com/BlueHarvestPod',
-		icon: faXTwitter,
-		background: 'bg-twitter',
-	},
-	{
-		title: 'Patreon',
-		href: 'https://www.patreon.com/blueharvestpodcast',
-		icon: faPatreon,
-		background: 'bg-patreon',
-	},
+	// {
+	// 	title: 'Twitter',
+	// 	href: 'https://twitter.com/BlueHarvestPod',
+	// 	icon: faXTwitter,
+	// 	background: 'bg-twitter',
+	// },
 	{
 		title: 'Apple Podcasts',
 		href: applePodcastUrl,
@@ -56,10 +50,22 @@ const items: Link[] = [
 		background: 'bg-spotify',
 	},
 	{
+		title: 'Twitch',
+		href: 'https://www.twitch.tv/blueharvestpod',
+		icon: faTwitch,
+		background: 'bg-twitch',
+	},
+	{
 		title: 'Voicemails & Emails',
 		href: 'mailto:blueharvestpodcast@gmail.com',
 		icon: faAt,
 		background: 'bg-email',
+	},
+	{
+		title: 'Patreon',
+		href: 'https://www.patreon.com/blueharvestpodcast',
+		icon: faPatreon,
+		background: 'bg-patreon',
 	},
 	{
 		title: 'Bluesky',
@@ -109,12 +115,6 @@ const items: Link[] = [
 		href: 'https://feed.podbean.com/blueharvestpodcast/feed.xml',
 		icon: faRssSquare,
 		background: 'bg-rss',
-	},
-	{
-		title: 'Twitch',
-		href: 'https://www.twitch.tv/blueharvestpod',
-		icon: faTwitch,
-		background: 'bg-twitch',
 	},
 	{
 		title: 'Merch Store',

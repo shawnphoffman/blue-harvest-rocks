@@ -6,13 +6,15 @@ import { siteTitle } from '@/app/data/meta'
 import titleLogo from '@/app/images/title.png'
 import ActiveLink from '@/components/core/ActiveLink'
 import Background from '@/components/core/Background'
+import SiteBanner from '@/components/core/SiteBanner'
 
 export default function ClassicLayout({ children }) {
 	return (
 		<>
 			<Background />
+			<SiteBanner />
 			{/* WRAPPER */}
-			<div className="flex flex-col items-center w-full max-w-screen-xl mx-auto">
+			<div className="flex flex-col items-center w-full max-w-screen-xl p-4 mx-auto">
 				<div className="flex flex-col w-full max-w-4xl gap-4">
 					{/* HEADER */}
 					<div className="flex flex-col items-center gap-4 text-center">

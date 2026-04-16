@@ -1,7 +1,6 @@
 import 'server-only'
 
 import { type QueryParams } from 'next-sanity'
-
 import { type PortableTextBlock } from 'next-sanity'
 
 import sanityClient from '@/sanity/sanity.client'

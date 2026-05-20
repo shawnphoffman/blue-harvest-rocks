@@ -1,12 +1,11 @@
+// import { faStarSharp } from '@awesome.me/kit-d7ccc5bb1a/icons/classic/solid'
+// import { RatingsApple, RatingsGoodpods, RatingsSpotify } from '@shawnphoffman/pod-sites-shared/ratings'
 // import { Suspense } from 'react'
 
-// import items from '@/app/data/links'
-// import Awards from '@/components/core/AwardsScrape'
+// import { getAppleReviews, getSpotifyReviews } from '@/app/data/actions'
+// import items, { appleRatingUrl, goodpodsUrl, spotifyUrl } from '@/app/data/links'
 // import LinkCard from '@/components/core/LinkCard'
 // import Loading from '@/components/core/Loading'
-// import RatingsApple from '@/components/core/RatingsApple'
-// import RatingsGoodpods from '@/components/core/RatingsGoodpods'
-// import RatingsSpotify from '@/components/core/RatingsSpotify'
 // import Reviews from '@/components/core/Reviews'
 
 export default async function Sodie() {
